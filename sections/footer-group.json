@@ -8,34 +8,43 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Salon",
             "menu": "footer"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
+            "heading": "Shop",
+            "menu": "shop"
           }
         },
-        "footer-2": {
-          "type": "text",
+        "76a353b6-972e-45a9-8dd1-2a172f6c4d2a": {
+          "type": "link_list",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "heading": "Journal",
+            "menu": "journal"
+          }
+        },
+        "863699be-e446-41d9-b9b4-dc339b68f84b": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Information",
+            "menu": "information"
           }
         }
       },
       "block_order": [
         "footer-0",
         "footer-1",
-        "footer-2"
+        "76a353b6-972e-45a9-8dd1-2a172f6c4d2a",
+        "863699be-e446-41d9-b9b4-dc339b68f84b"
       ],
       "settings": {
         "color_scheme": "background-1",
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
