@@ -2286,6 +2286,9 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 @media screen and (min-width: 990px) {
+  .header {
+    padding: 4rem 6rem;
+  }
   .header--top-left,
   .header--middle-left:not(.header--has-menu) {
     grid-template-areas:
@@ -2359,6 +2362,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .header__heading-logo {
   height: auto;
   width: 100%;
+  min-width: 15.6rem;
   transition: width 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
 }
 
@@ -2665,9 +2669,13 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item {
-  padding: 1.2rem;
+  padding: 1.5rem;
+  text-transform: uppercase;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
+  font-family: var(--font-alt-family);
+  font-weight: var(--font-alt-weight);
+  font-style: var(--font-alt-style);
 }
 
 .header__menu-item:hover {
