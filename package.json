@@ -1,0 +1,23 @@
+{
+  "name": "glasshouse-theme",
+  "version": "1.0.0",
+  "description": "Bespoke Shopify theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "shopify theme dev --store glasshouse-salon.myshopify.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rossb/glasshouse-theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rossb/glasshouse-theme/issues"
+  },
+  "homepage": "https://github.com/rossb/glasshouse-theme#readme",
+  "dependencies": {
+    "eslint": "^8.33.0"
+  }
+}
