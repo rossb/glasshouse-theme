@@ -2993,3 +2993,14 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
+
+.icon {
+  width: var(--icon-default-width);
+  height: var(--icon-default-height);
+}
+.icon[width] {
+  width: auto;
+}
+.icon[height] {
+  height: auto;
+}

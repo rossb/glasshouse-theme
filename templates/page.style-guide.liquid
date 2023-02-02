@@ -1,0 +1,458 @@
+<link rel="stylesheet" href="{{ 'section-main-page.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+
+{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+
+<style>
+  section {
+    margin-bottom: 32px;
+  }
+  .buttons-container {
+    margin: 16px 0;
+  }
+  .buttons-container button {
+    margin: 0 24px 16px 0;
+  }
+  section .form__group input:not([type=checkbox]):not([type=radio]),
+  section .form__group textarea {
+    width: 100%;
+  }
+  .form__group--flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .form__group--flex input {
+    margin-right: 10px;
+  }
+  .icons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: 60px;
+    margin: 3rem 0;
+  }
+  .style-guide-heading {
+    background: darkred;
+    color: white;
+    text-transform: uppercase;
+    padding: 1rem;
+    margin: 9rem 0 3rem;
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: normal;
+    font-size: 1.3rem;
+    font-weight: normal;
+  }
+</style>
+
+<div class="page-width page-width--narrow">
+  <h1 class="main-page-title page-title h0">
+    {{ page.title | escape }}
+  </h1>
+  <div>
+    <div class="page-content">
+      <section>
+        <h2 class="style-guide-heading">Headings</h2>
+        <h1>Heading one</h1>
+        <h2>Heading two</h2>
+        <h3>Heading three</h3>
+        <h4>Heading four</h4>
+        <h5>Heading five</h5>
+        <h6>Heading six</h6>
+      </section>
+
+      <section>
+        <h2 class="style-guide-heading">Body text</h2>
+
+        <p>Suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+        <p>Lorem <strong>ipsum dolor sit</strong> amet, consectetuer <em>adipiscing elit</em>, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna <a href="#">liquam erat volutpat</a>. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper.</p>
+
+        <ul>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+          <li>Four</li>
+        </ul>
+
+        <ol>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+          <li>Four</li>
+        </ol>
+
+        <h4 class="docs-title">Blockquote</h4>
+
+        <blockquote>
+          <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+          <cite>The author of the quote</cite>
+        </blockquote>
+      </section>
+
+      <section>
+        <h2 class="style-guide-heading">RTE</h2>
+        <div class="rte">
+          <h1>Heading One</h1>
+          <p><a href="#">Linked text here.</a> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.</p>
+          <h2>Heading Two</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.</p>
+          <h3>Heading Three</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.</p>
+          <h4>Heading Four</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.</p>
+          <h5>Heading Five</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.</p>
+          <h6>Heading Six</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="style-guide-heading">Icons</h2>
+
+        <h2 class="h4">General Icons</h2>
+        <div class="icons-grid">
+          {%- liquid
+            render 'icon-account'
+            render 'icon-arrow'
+            render 'icon-caret'
+            render 'icon-cart-empty'
+            render 'icon-cart'
+            render 'icon-checkmark'
+            render 'icon-clipboard'
+            render 'icon-close-small'
+            render 'icon-close'
+            render 'icon-discount'
+            render 'icon-error'
+            render 'icon-facebook'
+            render 'icon-filter'
+            render 'icon-hamburger'
+            render 'icon-instagram'
+            render 'icon-minus'
+            render 'icon-padlock'
+            render 'icon-pause'
+            render 'icon-play'
+            render 'icon-plus'
+            render 'icon-remove'
+            render 'icon-share'
+            render 'icon-success'
+            render 'icon-tick'
+            render 'icon-tick'
+            render 'icon-unavailable'
+            render 'icon-zoom'
+          -%}
+        </div>
+
+        <h2 class="h4">Social Icons</h2>
+        <div class="icons-grid">
+          {%- liquid
+            render 'icon-facebook'
+            render 'icon-instagram'
+            render 'icon-pinterest'
+            render 'icon-snapchat'
+            render 'icon-tiktok'
+            render 'icon-tumblr'
+            render 'icon-twitter'
+            render 'icon-vimeo'
+            render 'icon-youtube'
+          -%}
+        </div>
+
+        <h2 class="h4">Payment Icons</h2>
+        <div class="icons-grid">
+          {% assign payment_types = 'american_express,apple_pay,diners_club,discover,google_pay,master,paypal,shopify_pay,visa' | split: ',' %}
+          {%- for type in payment_types -%}
+          {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+          {%- endfor -%}
+        </div>
+
+        <h2 class="h4">Enabled payment icons</h2>
+        <div class="icons-grid">
+          {%- for type in shop.enabled_payment_types -%}
+            {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+          {%- endfor -%}
+        </div>
+      </section>
+
+      <section>
+        <h2 class="style-guide-heading">Buttons</h2>
+
+        <h4>Default Button</h4>
+        <code>.button</code>
+        <div class="buttons-container">  
+          <button class="button">Default Button</button>
+          <button class="button" disabled>Default Button disabled</button>
+          <a href="#" class="button">Link button</a>
+        </div>
+
+        <h4>Secondary Button</h4>
+        <code>.button .button--secondary</code>
+        <div class="buttons-container">
+          <button class="button button--secondary">Secondary button</button>
+          <button class="button button--secondary" disabled>Disabled button</button>
+          <a href="#" class="button button--secondary">Link button</a>
+        </div>
+
+        <h4>Tertiary Button</h4>
+        <code>.button .button--tertiary</code>
+        <div class="buttons-container">
+          <button class="button button--tertiary">Tertiary button</button>
+          <button class="button button--tertiary" disabled>Disabled button</button>
+          <a href="#" class="button button--tertiary">Link button</a>
+        </div>
+
+        <h4>Small Button</h4>
+        <code>.button .button--small</code>
+        <div class="buttons-container">
+          <button class="button button--small">Small Button</button>
+          <button class="button button--small" disabled>Disabled button</button>
+          <a href="#" class="button button--small">Link button</a>
+        </div>
+
+        <h4>Full width Button</h4>
+        <code>.button .button--full-width</code>
+        <div class="buttons-container">
+          <button class="button button--full-width">Full width button</button>
+          <button class="button button--full-width" disabled>Disabled button</button>
+          <a href="#" class="button button--full-width">Link button</a>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="style-guide-heading">Forms</h2>
+        <form>
+          <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+            {% render 'icon-success' %}
+            {{ 'templates.contact.form.post_success' | t }}
+          </h2>
+          <div class="form__message">
+            <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+              {% render 'icon-error' %}
+              {{ 'templates.contact.form.error_heading' | t }}
+            </h2>
+          </div>
+          <ul class="form-status-list caption-large" role="list">
+            <li>
+              <a href="#ContactForm-email" class="link">Please enter a valid email address.</a>
+            </li>
+          </ul>
+
+          <div class="contact__fields">
+              <div class="field">
+                <input
+                  class="field__input"
+                  autocomplete="name"
+                  type="text"
+                  id="ContactForm-name"
+                  name="contact[{{ 'templates.contact.form.name' | t }}]"
+                  value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                  placeholder="{{ 'templates.contact.form.name' | t }}"
+                >
+                <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+              </div>
+              <div class="field field--with-error">
+                <input
+                  autocomplete="email"
+                  type="email"
+                  id="ContactForm-email"
+                  class="field__input"
+                  name="contact[email]"
+                  spellcheck="false"
+                  autocapitalize="off"
+                  value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                  aria-required="true"
+                  {% if form.errors contains 'email' %}
+                    aria-invalid="true"
+                    aria-describedby="ContactForm-email-error"
+                  {% endif %}
+                  placeholder="{{ 'templates.contact.form.email' | t }}"
+                >
+                <label class="field__label" for="ContactForm-email">
+                  {{- 'templates.contact.form.email' | t }}
+                  <span aria-hidden="true">*</span></label
+                >
+                {%- if form.errors contains 'email' -%}
+                  <small class="contact__field-error" id="ContactForm-email-error">
+                    <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                    <span class="form__message">
+                      {%- render 'icon-error' -%}
+                      {{- form.errors.translated_fields.email | capitalize }}
+                      {{ form.errors.messages.email -}}
+                    </span>
+                  </small>
+                {%- endif -%}
+              </div>
+            </div>
+            <div class="field">
+              <input
+                type="tel"
+                id="ContactForm-phone"
+                class="field__input"
+                autocomplete="tel"
+                name="contact[{{ 'templates.contact.form.phone' | t }}]"
+                pattern="[0-9\-]*"
+                value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                placeholder="{{ 'templates.contact.form.phone' | t }}"
+              >
+              <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+            </div>
+            <div class="field">
+              <textarea
+                rows="10"
+                id="ContactForm-body"
+                class="text-area field__input"
+                name="contact[{{ 'templates.contact.form.comment' | t }}]"
+                placeholder="{{ 'templates.contact.form.comment' | t }}"
+              >
+                {{- form.body -}}
+              </textarea>
+              <label class="form__label field__label" for="ContactForm-body">
+                {{- 'templates.contact.form.comment' | t -}}
+              </label>
+            </div>
+            <div class="contact__button">
+              <button type="submit" class="button">
+                {{ 'templates.contact.form.send' | t }}
+              </button>
+            </div>
+        </form>
+      </section>
+
+      <section>
+        <h2 class="style-guide-heading">Product Card</h2>
+
+        {%- for collection in collections limit: 1 -%}
+          {% assign collection = collection %}
+        {%- endfor -%}
+
+        <ul class="grid product-grid grid--2-col-tablet-down grid--2-col-desktop">
+          {%- for product in collection.products limit: 4 -%}
+            <li class="grid__item">
+              {% render 'card-product',
+                card_product: product,
+                media_aspect_ratio: 'adapt',
+                show_secondary_image: true,
+                show_vendor: true,
+                show_rating: true,
+                lazy_load: true,
+                show_quick_add: true,
+              %}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="style-guide-heading">Collection Card</h2>
+
+        <ul class="grid">
+          <li class="grid__item">
+            {% render 'card-collection',
+              card_collection: collection,
+              media_aspect_ratio: 'square',
+              columns: 1
+            %}
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="style-guide-heading">Article Card</h2>
+
+        {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+        {{ 'component-card.css' | asset_url | stylesheet_tag }}
+        {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+
+        <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+          {%- for article in blogs.journal.articles limit: 3 -%}
+            <div class="blog-articles__article article">
+              {%- render 'article-card',
+                article: article,
+                media_height: 'adapt',
+                media_aspect_ratio: article.image.aspect_ratio,
+                show_image: true,
+                show_date: true,
+                show_author: true,
+                show_excerpt: true
+              -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </section>
+
+      <section>
+        <h2 class="style-guide-heading">Accordions</h2>
+        {%- liquid
+          assign accordionLabels = 'Accordion label 1|Accordion label 2|Accordion label 3|Accordion label 4'
+          assign accordionContent = 'Accordion content lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.|Accordion content lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.|Accordion content lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.|Accordion content lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.'
+          assign labelArray = accordionLabels | split: '|'
+          assign contentArray = accordionContent | split: '|'
+        -%}
+
+        {%- for label in labelArray -%}
+          <div class="accordion">
+            <details
+              id="Details-{{ forloop.index }}-Accordion"
+              {% if forloop.first %}
+                open
+              {% endif %}
+            >
+              <summary id="Summary-{{ forloop.index }}-Accordion">
+                {% render 'icon-accordion' %}
+                <h3 class="accordion__title h4">
+                  {{ label }}
+                </h3>
+                {% render 'icon-caret' %}
+              </summary>
+              <div
+                class="accordion__content rte"
+                id="CollapsibleAccordion-{{ forloop.index }}-Accordion"
+                role="region"
+                aria-labelledby="Summary-{{ forloop.index }}-Accordion"
+              >
+                {{ contentArray[forloop.index0] }}
+              </div>
+            </details>
+          </div>
+        {%- endfor -%}
+      </section>
+
+      <section>
+        <h2 class="style-guide-heading">Pagination</h2>
+
+        <link rel="stylesheet" href="{{ 'component-pagination.css' | asset_url }}" media="print" onload="this.media='all'">
+        <noscript>{{ 'component-pagination.css' | asset_url | stylesheet_tag }}</noscript>
+
+        <div class="pagination-wrapper">
+          <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+            <ul class="pagination__list list-unstyled" role="list">
+              <li>
+                <a href="#" class="pagination__item pagination__item--next pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.previous' | t }}">
+                  {% render 'icon-caret' %}
+                </a>
+              </li>
+              <li><a href="#" class="pagination__item link">1</a></li>
+              <li><a href="#" class="pagination__item link">2</a></li>
+              <li><a href="#" class="pagination__item link">3</a></li>
+              <li><a role="link" class="pagination__item pagination__item--current light">4</a></li>
+              <li><a href="#" class="pagination__item link">5</a></li>
+              <li><span class="pagination__item">6</span></li>
+              <li><span class="pagination__item">7</span></li>
+              <li>
+                <a href="#" class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.next' | t }}">
+                  {%- render 'icon-caret' -%}
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+</div>

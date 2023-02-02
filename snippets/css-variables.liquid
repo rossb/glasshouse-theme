@@ -1,5 +1,8 @@
 {% style %}
   :root {
+    --icon-default-width: 2rem;
+    --icon-default-height: 2rem;
+
     --font-body-family: 'Practice', 'Georgia', sans-serif;
     --font-body-style: normal;
     --font-body-weight: 400;
@@ -19,16 +22,16 @@
     --color-base-background-1: 245, 244, 242; /* #F5F4F2 */
     --color-base-background-2: 240, 234, 226; /* #F0EAE2 */
     --color-base-background-3: 38, 43, 47; /* #262B2F */
-    --color-base-solid-button-labels: var(--color-base-text);
+    --color-base-solid-button-labels: 255, 255, 255;
     --color-base-outline-button-labels: var(--color-base-text);
     --color-base-accent-1: var(--color-base-text);
     --color-base-accent-2: var(--color-base-text);
     --payment-terms-background-color: var(--color-base-background-1);
 
-    --gradient-base-background-1: var(--color-base-background-1);
-    --gradient-base-background-2: var(--color-base-background-2);
-    --gradient-base-accent-1: var(--color-base-accent-1);
-    --gradient-base-accent-2: var(--color-base-accent-2);
+    --gradient-base-background-1: rgb(var(--color-base-background-1));
+    --gradient-base-background-2: rgb(var(--color-base-background-2));
+    --gradient-base-accent-1: rgb(var(--color-base-accent-1));
+    --gradient-base-accent-2: rgb(var(--color-base-accent-2));
 
     --media-padding: {{ settings.media_padding }}px;
     --media-border-opacity: {{ settings.media_border_opacity | divided_by: 100.0 }};
