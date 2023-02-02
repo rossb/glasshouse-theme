@@ -33,7 +33,7 @@
   }
 
   .header__heading-logo {
-    max-width: {{ settings.logo_width }}px;
+    max-width: 100px;
   }
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
@@ -397,19 +397,14 @@
         <h1 class="header__heading">
       {%- endif -%}
           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-            {%- if settings.logo != blank -%}
-              {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-              {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
-              {{ settings.logo | image_url: width: 500 | image_tag:
-                class: 'header__heading-logo motion-reduce',
-                widths: '50, 100, 150, 200, 250, 300, 400, 500',
-                height: logo_height,
-                width: settings.logo_width,
-                alt: logo_alt
-              }}
-            {%- else -%}
-              <span class="h2">{{ shop.name }}</span>
-            {%- endif -%}
+            <img
+              src="{{ 'logo.svg' | asset_url }}"
+              alt="{{ shop.name | escape }}"
+              class="header__heading-logo motion-reduce"
+              height="35"
+              width="156"
+              loading="lazy"
+            >
           </a>
       {%- if request.page_type == 'index' -%}
         </h1>
@@ -522,12 +517,12 @@
           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
             {%- if settings.logo != blank -%}
               {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-              {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+              {%- assign logo_height = 100 | divided_by: settings.logo.aspect_ratio -%}
               {{ settings.logo | image_url: width: 500 | image_tag:
                 class: 'header__heading-logo',
                 widths: '50, 100, 150, 200, 250, 300, 400, 500',
                 height: logo_height,
-                width: settings.logo_width,
+                width: 100,
                 alt: logo_alt
               }}
             {%- else -%}
