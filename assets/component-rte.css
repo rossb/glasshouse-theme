@@ -1,7 +1,24 @@
+.rte {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+@media screen and (min-width: 750px) {
+  .rte {
+    font-size: var(--font-size-desktop-base);
+    line-height: var(--line-height-desktop-base);
+  }
+}
+
 .rte:after {
   clear: both;
   content: '';
   display: block;
+}
+
+.rte p {
+  margin: 0;
+  margin-bottom: calc(var(--font-size-base) * var(--line-height-base));
 }
 
 .rte > p:first-child {
@@ -10,6 +27,37 @@
 
 .rte > p:last-child {
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .rte p {
+    margin: 0;
+    margin-bottom: calc(var(--font-size-desktop-base) * var(--line-height-desktop-base));
+  }
+}
+
+.rte h1,
+.rte h2,
+.rte h3,
+.rte h4,
+.rte h5,
+.rte h6 {
+  font-size: inherit;
+  color: inherit;
+  font-weight: bold;
+  margin: 0;
+  margin-top: calc(var(--font-size-base) * var(--line-height-base) * 2);
+}
+
+@media screen and (min-width: 750px) {
+  .rte h1,
+  .rte h2,
+  .rte h3,
+  .rte h4,
+  .rte h5,
+  .rte h6 {
+    margin-top: calc(var(--font-size-desktop-base) * var(--line-height-desktop-base) * 2);
+  }
 }
 
 .rte table {
@@ -32,14 +80,36 @@
   margin-bottom: var(--media-shadow-vertical-offset);
 }
 
+.rte ul {
+    list-style-type: none;
+}
+.rte ul li {
+    position: relative;
+    padding-left: 1em;
+}
+.rte ul li::before {
+    content: '- ';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 .rte ul,
 .rte ol {
-  list-style-position: inside;
+  list-style-position: outside;
+  padding-left: 0;
+}
+
+.rte ol {
   padding-left: 2rem;
 }
 
 .rte li {
   list-style: inherit;
+}
+
+.rte li p:last-child {
+  margin-bottom: 0;
 }
 
 .rte li:last-child {

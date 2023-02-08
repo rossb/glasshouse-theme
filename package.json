@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "shopify theme dev --store glasshouse-salon.myshopify.com"
+    "start": "shopify theme dev --store glasshouse-salon.myshopify.com"
   },
   "repository": {
     "type": "git",

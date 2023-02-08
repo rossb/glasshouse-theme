@@ -51,9 +51,9 @@
           grid-template-columns: 100%;
           min-height: 100%;
           margin: 0;
-          font-size: 1.5rem;
-          letter-spacing: 0.06rem;
-          line-height: calc(1 + 0.8 / var(--font-body-scale));
+          font-size: var(--font-size-base);
+          letter-spacing: normal;
+          line-height: var(--line-height-base);
           font-family: var(--font-body-family);
           font-style: var(--font-body-style);
           font-weight: var(--font-body-weight);
@@ -61,7 +61,8 @@
 
         @media screen and (min-width: 750px) {
           body {
-            font-size: 1.6rem;
+            font-size: var(--font-size-desktop-base);
+            line-height: var(--line-height-desktop-base);
           }
         }
     {% endstyle %}
@@ -83,7 +84,19 @@
     </script>
   </head>
 
-  <body class="gradient">
+  {%- liquid
+    assign template_class = 'template-' | append: template.name | handle
+    assign template_class_long = 'template-' | append: template | handle
+    assign body_classes = template_class
+    if template_class_long != template_class
+      assign body_classes = body_classes | append: ' ' | append: template_class_long
+    endif
+  -%}
+  <body
+    id="{{ page_title | handle }}"
+    class="{{ body_classes }}"
+    data-template="{{ template }}"
+  >
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>

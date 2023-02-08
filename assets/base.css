@@ -46,7 +46,7 @@
 :root,
 .color-background-1 {
   --color-link: var(--color-base-outline-button-labels);
-  --alpha-link: 0.85;
+  --alpha-link: 1;
 }
 
 .color-background-2,
@@ -54,7 +54,7 @@
 .color-accent-1,
 .color-accent-2 {
   --color-link: var(--color-foreground);
-  --alpha-link: 0.7;
+  --alpha-link: 1;
 }
 
 :root,
@@ -315,7 +315,7 @@ body,
 .color-inverse,
 .color-accent-1,
 .color-accent-2 {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgb(var(--color-foreground));
   background-color: rgb(var(--color-background));
 }
 
@@ -400,6 +400,20 @@ body,
   font-weight: var(--font-body-weight);
 }
 
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.hero-text {
+  font-size: 5.6rem;
+  line-height: calc(72 / 56);
+}
+
 h1,
 h2,
 h3,
@@ -421,12 +435,13 @@ h5,
 }
 
 .hxl {
-  font-size: calc(var(--font-heading-scale) * 5rem);
+  /* font-size: calc(var(--font-heading-scale) * 5rem); */
 }
 
 @media only screen and (min-width: 750px) {
   .hxl {
-    font-size: calc(var(--font-heading-scale) * 6.2rem);
+    font-size: 9rem;
+    line-height: calc(90 / 80);
   }
 }
 
@@ -442,71 +457,105 @@ h5,
 
 h1,
 .h1 {
-  font-size: calc(var(--font-heading-scale) * 3rem);
+  font-size: 2.2rem;
+  line-height: calc(24 / 22);
 }
 
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
-    font-size: calc(var(--font-heading-scale) * 4rem);
+    font-size: 5rem;
+    line-height: calc(60 / 50);
   }
 }
 
 h2,
 .h2 {
-  font-size: calc(var(--font-heading-scale) * 2rem);
+  font-size: 2rem;
+  line-height: calc(48 / 20);
 }
 
 @media only screen and (min-width: 750px) {
   h2,
   .h2 {
-    font-size: calc(var(--font-heading-scale) * 2.4rem);
+    font-size: 3rem;
+    line-height: calc(48 / 30);
   }
 }
 
 h3,
 .h3 {
-  font-size: calc(var(--font-heading-scale) * 1.7rem);
+  font-size: 2rem;
+  line-height: calc(24 / 20);
 }
 
 @media only screen and (min-width: 750px) {
   h3,
   .h3 {
-    font-size: calc(var(--font-heading-scale) * 1.8rem);
+    font-size: 2.2rem;
+    line-height: calc(27 / 22);
   }
 }
 
 h4,
 .h4 {
-  font-family: var(--font-heading-family);
-  font-style: var(--font-heading-style);
-  font-size: calc(var(--font-heading-scale) * 1.5rem);
+  font-size: 2rem;
+  line-height: calc(24 / 20);
 }
 
 h5,
 .h5 {
-  font-size: calc(var(--font-heading-scale) * 1.2rem);
-}
-
-@media only screen and (min-width: 750px) {
-  h5,
-  .h5 {
-    font-size: calc(var(--font-heading-scale) * 1.3rem);
-  }
+  font-size: 2rem;
+  line-height: calc(24 / 20);
 }
 
 h6,
 .h6 {
-  color: rgba(var(--color-foreground), 0.75);
-  margin-block-start: 1.67em;
-  margin-block-end: 1.67em;
+  font-size: 2rem;
+  line-height: calc(24 / 20);
+}
+
+.h1-alt,
+.h2-alt,
+.h3-alt,
+.h4-alt {
+  letter-spacing: 1.2;
+  font-family: var(--font-alt-family);
+  font-weight: var(--font-alt-weight-normal);
+}
+
+.h1-alt span,
+.h2-alt span,
+.h3-alt span,
+.h4-alt span {
+  font-weight: var(--font-alt-weight-light);
+}
+
+.h1-alt {
+  font-size: 3rem;
+  line-height: calc(36 / 30);
+}
+
+.h2-alt {
+  font-size: 2rem;
+  line-height: calc(20 / 16);
+}
+
+.h3-alt {
+  font-size: 1.8rem;
+  line-height: calc(22 / 18);
+}
+
+.h4-alt {
+
 }
 
 blockquote {
-  font-style: italic;
-  color: rgba(var(--color-foreground), 0.75);
+  font-style: normal;
+  color: rgb(var(--color-foreground));
   border-left: 0.2rem solid rgba(var(--color-foreground), 0.2);
   padding-left: 1rem;
+  margin-left: 0;
 }
 
 @media screen and (min-width: 750px) {
@@ -638,7 +687,6 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.4rem;
   font-family: inherit;
 }
 
@@ -647,7 +695,7 @@ h6:empty {
 }
 
 .link--text:hover {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgb(var(--color-foreground));
 }
 
 .link-with-icon {
@@ -1577,7 +1625,7 @@ details[open] > .share-button__fallback {
 }
 
 .share-button__fallback button:hover {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgb(var(--color-foreground));
 }
 
 .share-button__fallback button:hover svg {
@@ -1725,7 +1773,7 @@ details[open] > .share-button__fallback {
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
   font-size: 1.2rem;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgb(var(--color-foreground));
 }
 
 .field:hover.field:after,
@@ -1827,7 +1875,7 @@ details[open] > .share-button__fallback {
   position: absolute;
   transition: top var(--duration-short) ease,
     font-size var(--duration-short) ease;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgb(var(--color-foreground));
   letter-spacing: 0.1rem;
   line-height: 1.5;
 }
@@ -2356,7 +2404,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .header__heading-link .h2 {
   line-height: 1;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgb(var(--color-foreground));
 }
 
 .header__heading-logo {
@@ -2672,10 +2720,11 @@ details[open] > .header__submenu {
   padding: 1.5rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgb(var(--color-foreground));
   font-family: var(--font-alt-family);
-  font-weight: var(--font-alt-weight);
+  font-weight: var(--font-alt-weight-normal);
   font-style: var(--font-alt-style);
+  font-size: 1.4rem;
 }
 
 .header__menu-item:hover {
