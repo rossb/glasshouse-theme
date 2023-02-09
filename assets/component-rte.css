@@ -2,11 +2,19 @@
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
 }
+.rte--small {
+  font-size: 1.6rem;
+  line-height: calc(26 / 16);
+}
 
 @media screen and (min-width: 750px) {
   .rte {
     font-size: var(--font-size-desktop-base);
     line-height: var(--line-height-desktop-base);
+  }
+  .rte--small {
+    font-size: 2rem;
+    line-height: calc(28 / 20);
   }
 }
 
