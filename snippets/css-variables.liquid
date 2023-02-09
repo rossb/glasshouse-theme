@@ -122,16 +122,23 @@
     --text-boxes-shadow-vertical-offset: {{ settings.text_boxes_shadow_vertical_offset }}px;
     --text-boxes-shadow-blur-radius: {{ settings.text_boxes_shadow_blur }}px;
 
-    --buttons-radius: {{ settings.buttons_radius }}px;
-    --buttons-radius-outset: {% if settings.buttons_radius > 0 %}{{ settings.buttons_radius | plus: settings.buttons_border_thickness }}{% else %}0{% endif %}px;
-    --buttons-border-width: {% if settings.buttons_border_opacity > 0 %}{{ settings.buttons_border_thickness }}{% else %}0{% endif %}px;
-    --buttons-border-opacity: {{ settings.buttons_border_opacity | divided_by: 100.0 }};
-    --buttons-shadow-opacity: {{ settings.buttons_shadow_opacity | divided_by: 100.0 }};
-    --buttons-shadow-visible: {% if settings.buttons_shadow_opacity > 0 %}1{% else %}0{% endif %};
-    --buttons-shadow-horizontal-offset: {{ settings.buttons_shadow_horizontal_offset }}px;
-    --buttons-shadow-vertical-offset: {{ settings.buttons_shadow_vertical_offset }}px;
-    --buttons-shadow-blur-radius: {{ settings.buttons_shadow_blur }}px;
-    --buttons-border-offset: {% if settings.buttons_radius > 0 or settings.buttons_shadow_opacity > 0 %}0.3{% else %}0{% endif %}px;
+    --buttons-radius: 0;
+    --buttons-radius-outset: 0px;
+    --buttons-border-width: 1.5px;
+    --buttons-border-opacity: 1;
+    --buttons-shadow-opacity: 1;
+    --buttons-shadow-visible: 1;
+    --buttons-shadow-horizontal-offset: 0px;
+    --buttons-shadow-vertical-offset: 0px;
+    --buttons-shadow-blur-radius: 0px;
+    --buttons-border-offset: 0px;
+    --buttons-height-mobile: 2.7rem;
+    --buttons-height-desktop: 3.6rem;
+    --buttons-font-size-mobile: 1rem;
+    --buttons-line-height-mobile: 1px;
+    --buttons-font-size-desktop: 1.4rem;
+    --buttons-line-height-desktop: 1.4px;
+    /* --buttons-large-height: 4.5rem; */
 
     --inputs-radius: {{ settings.inputs_radius }}px;
     --inputs-border-width: {{ settings.inputs_border_thickness }}px;
