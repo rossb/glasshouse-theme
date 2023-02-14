@@ -1,13 +1,8 @@
 .footer {
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
-}
-
-.footer:not(.color-background-1) {
-  border-top: none;
+  
 }
 
 .footer__content-top {
-  padding-bottom: 5rem;
   display: block;
 }
 
@@ -41,8 +36,6 @@
 }
 
 .footer__content-bottom {
-  border-top: solid 0.1rem rgba(var(--color-foreground), 0.08);
-  padding-top: 3rem;
 }
 
 .footer__content-bottom:only-child {
@@ -70,10 +63,6 @@
   }
 }
 
-.footer__localization:empty + .footer__column--info {
-  align-items: center;
-}
-
 @media screen and (max-width: 749px) {
   .footer__localization:empty + .footer__column {
     padding-top: 1.5rem;
@@ -86,26 +75,15 @@
 }
 
 .footer__column--info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 @media screen and (min-width: 750px) {
   .footer__column--info {
-    padding-left: 0;
-    padding-right: 0;
-    align-items: flex-end;
   }
 }
 
 .footer-block:only-child:last-child {
   text-align: center;
-  max-width: 76rem;
-  margin: 0 auto;
 }
 
 @media screen and (min-width: 750px) {
@@ -124,10 +102,6 @@
   align-items: flex-end;
   margin-top: 3rem;
   gap: 1rem;
-}
-
-.footer-block--newsletter:only-child {
-  margin-top: 0;
 }
 
 @media screen and (max-width: 749px) {
@@ -175,7 +149,6 @@
 }
 
 .newsletter-form__field-wrapper {
-  max-width: 36rem;
 }
 
 @media screen and (min-width: 750px) {
@@ -402,7 +375,6 @@ noscript .localization-selector.link {
 
 @media screen and (min-width: 750px) {
   .footer__payment {
-    margin-top: 1.5rem;
   }
 }
 
@@ -411,14 +383,6 @@ noscript .localization-selector.link {
 }
 
 .footer__copyright {
-  text-align: center;
-  margin-top: 1.5rem;
-}
-
-@media screen and (min-width: 750px) {
-  .footer__content-bottom-wrapper:not(.footer__content-bottom-wrapper--center) .footer__copyright {
-    text-align: right;
-  }
 }
 
 @keyframes appear-down {
@@ -453,6 +417,11 @@ noscript .localization-selector.link {
   .footer-block__details-content > li:not(:last-child) {
     margin-right: 1.5rem;
   }
+}
+
+.copyright__title {
+  font-size: 3rem;
+  margin: 0;
 }
 
 .footer-block__details-content .list-menu__item--link,
