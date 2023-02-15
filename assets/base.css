@@ -398,7 +398,6 @@ body,
 
 p {
   margin: 0;
-  margin-bottom: calc(var(--font-size-desktop-base) * var(--line-height-desktop-base));
 }
 
 a {
