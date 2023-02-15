@@ -59,6 +59,7 @@
   },
   "newsletter": {
     "label": "Email",
+    "placeholder": "name@email.com",
     "success": "Thanks for subscribing",
     "button_label": "Subscribe"
   },

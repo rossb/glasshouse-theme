@@ -944,6 +944,9 @@
         }
       },
       "settings": {
+        "address": {
+          "label": "Address"
+        },
         "newsletter_enable": {
           "label": "Show email signup"
         },

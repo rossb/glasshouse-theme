@@ -57,11 +57,11 @@
               {% elsif form.posted_successfully? %}
                 aria-describedby="ContactFooter-success"
               {% endif %}
-              placeholder="{{ 'newsletter.label' | t }}"
+              placeholder="{{ 'newsletter.placeholder' | t }}"
               required
             >
             <label class="field__label" for="NewsletterForm--{{ section.id }}">
-              {{ 'newsletter.label' | t }}
+              {{ 'newsletter.placeholder' | t }}
             </label>
             <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
               {% render 'icon-arrow' %}
@@ -83,10 +83,6 @@
       {{ shop | login_button: action: 'follow' }}
     </div>
   {%- endif -%}
-
-  {%- if section.settings.show_social -%}
-    {%- render 'social-icons' -%}
-  {%- endif -%}
 </div>
 
 <footer class="footer color-inverse">
@@ -104,6 +100,16 @@
         -%}
         <div class="footer__blocks-wrapper">
           <div class="footer-block--newsletter">
+            <div class="footer-block__brand-info">
+              {%- if section.settings.address != blank -%}
+                {{ section.settings.address }}
+              {%- endif -%}
+
+              {%- if section.settings.show_social -%}
+                {%- render 'social-icons' -%}
+              {%- endif -%}
+            </div>
+
             {%- if section.settings.newsletter_enable -%}
               <div class="footer-block__newsletter">
                 {%- if section.settings.newsletter_heading != blank -%}
@@ -130,11 +136,11 @@
                         {% elsif form.posted_successfully? %}
                           aria-describedby="ContactFooter-success"
                         {% endif %}
-                        placeholder="{{ 'newsletter.label' | t }}"
+                        placeholder="{{ 'newsletter.placeholder' | t }}"
                         required
                       >
                       <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                        {{ 'newsletter.label' | t }}
+                        {{ 'newsletter.placeholder' | t }}
                       </label>
                       <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
                         {% render 'icon-arrow' %}
@@ -158,10 +164,6 @@
               <div class="footer__follow-on-shop">
                 {{ shop | login_button: action: 'follow' }}
               </div>
-            {%- endif -%}
-
-            {%- if section.settings.show_social -%}
-              {%- render 'social-icons' -%}
             {%- endif -%}
           </div>
 
@@ -187,29 +189,6 @@
                         {%- endfor -%}
                       </ul>
                     {%- endif -%}
-                  {%- when 'brand_information' -%}
-                    <div class="footer-block__brand-info">
-                      {%- if settings.brand_image != blank -%}
-                        {%- assign brand_image_height = settings.brand_image_width | divided_by: settings.brand_image.aspect_ratio -%}
-                        <div class="footer-block__image-wrapper global-media-settings" style="max-width: min(100%, {{ settings.brand_image_width }}px);">
-                          {{ settings.brand_image | image_url: width: 1100 | image_tag:
-                            loading: 'lazy',
-                            widths: '50, 100, 150, 200, 300, 400, 550, 800, 1100',
-                            height: brand_image_height,
-                            width: settings.brand_image_width
-                          }}
-                        </div>
-                      {%- endif -%}
-                      {%- if settings.brand_headline != blank -%}
-                        <h2 class="footer-block__heading rte">{{ settings.brand_headline }}</h2>
-                      {%- endif -%}
-                      {%- if settings.brand_description != blank -%}
-                        <div class="rte">{{ settings.brand_description }}</div>
-                      {%- endif -%}
-                      {%- if block.settings.show_social -%}
-                        {%- render 'social-icons' -%}
-                      {%- endif -%}
-                    </div>
                   {%- endcase -%}
               </div>
             {%- endfor -%}
@@ -425,6 +404,12 @@
     }
   ],
   "settings": [
+    {
+      "type": "richtext",
+      "id": "address",
+      "label": "t:sections.footer.settings.address.label",
+      "default": "<p>(+44) 020 8533 4206<br>139 Mare Street, London, E8 3RH<br><a href=\"mailto:info@glasshousesalon.co.uk\">info@glasshousesalon.co.uk</a></p>"
+    },
     {
       "type": "header",
       "content": "t:sections.footer.settings.header__1.content",
