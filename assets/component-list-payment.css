@@ -1,9 +1,8 @@
 .list-payment {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   margin: -0.5rem 0;
-  padding-top: 1rem;
+  padding-top: 2rem;
   padding-left: 0;
 }
 
@@ -18,5 +17,5 @@
 .list-payment__item {
   align-items: center;
   display: flex;
-  padding: 0.5rem;
+  padding: 0 0.7rem 0.7rem 0;
 }

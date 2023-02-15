@@ -17,6 +17,8 @@
   --color-foreground: var(--color-base-background-1);
   --color-background: var(--color-base-text);
   --gradient-background: rgb(var(--color-base-text));
+  --inputs-border-color: rgb(var(--color-base-background-1));
+  --inputs-color-placeholder: rgba(var(--color-base-background-1), 0.41);
 }
 
 .color-accent-1 {
@@ -1895,9 +1897,8 @@ details[open] > .share-button__fallback {
   transition: top var(--duration-short) ease,
     font-size var(--duration-short) ease;
   color: var(--inputs-color-placeholder);
-  letter-spacing: 0.1rem;
   line-height: 1.5;
-  font-family: var(--font-alt-family);
+  font-family: var(--inputs-font-family);
 }
 
 .field__input:focus ~ .field__label,
@@ -1941,7 +1942,7 @@ details[open] > .share-button__fallback {
   cursor: pointer;
   display: flex;
   height: 4.4rem;
-  justify-content: center;
+  justify-content: flex-end;
   overflow: hidden;
   padding: 0;
   position: absolute;
@@ -3112,5 +3113,5 @@ button.ctrl-unstyled {
 }
 
 input {
-  font-family: var(--font-alt-family);
+  font-family: var(--inputs-font-family);
 }
