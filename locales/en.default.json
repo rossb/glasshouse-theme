@@ -64,7 +64,10 @@
     "label": "Email",
     "placeholder": "name@email.com",
     "success": "Thanks for subscribing",
-    "button_label": "Subscribe"
+    "button_label": "Subscribe",
+    "title": "Sign up to our newsletter",
+    "subtitle": "Sign up",
+    "desc": "Be the first to receive updates on new products, events, offers, and more, unsubscribe anytime."
   },
   "accessibility": {
     "skip_to_text": "Skip to content",

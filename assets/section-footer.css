@@ -310,6 +310,40 @@ noscript .localization-selector.link {
   text-decoration: underline;
 }
 
+.newsletter-cta {
+  background-color: #F0EAE2;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 3rem 7.5rem;
+  font-size: 1.4rem;
+  line-height: calc(16 / 14);
+  text-align: center;
+}
+
+.newsletter-cta h2 {
+  font-size: 2rem;
+  line-height: calc(24 / 20);
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.newsletter-cta h3 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 2.5rem 0 1rem;
+  font-family: var(--font-alt-family);
+}
+
+.newsletter-cta form {
+  padding: 0 2.5rem;
+}
+
+.newsletter-cta input {
+  background-color: transparent;
+}
+
 @media screen and (max-width: 749px) {
 
   .footer-block__brand-info .list-hours {
