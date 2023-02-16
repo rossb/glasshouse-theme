@@ -312,6 +312,11 @@ noscript .localization-selector.link {
 
 @media screen and (max-width: 749px) {
 
+  .footer-block__brand-info .list-hours {
+    font-size: 1.2rem;
+    line-height: calc(20 / 12);
+  }
+
   .footer__linklists {
     width: 75%;
   }

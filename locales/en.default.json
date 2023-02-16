@@ -57,6 +57,9 @@
       "name": "Slider"
     }
   },
+  "hours": {
+    "label": "Open Times"
+  },
   "newsletter": {
     "label": "Email",
     "placeholder": "name@email.com",

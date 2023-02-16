@@ -105,6 +105,22 @@
                 {{ section.settings.address }}
               {%- endif -%}
 
+              {%- if section.settings.show_hours -%}
+                <h2 class="footer-block__heading">{{ 'hours.label' | t }}</h2>
+                <dl class="list-hours">
+                  {% for i in (1..7) %}
+                    {% assign label_key = 'day' | append: i | append: '_label' %}
+                    {% assign hours_key = 'day' | append: i | append: '_hours' %}
+                    {%- if settings[label_key] != blank -%}
+                      <div>
+                        <dt>{{ settings[label_key] }}</dt>
+                        <dd>{{ settings[hours_key] }}</dd>
+                      </div>
+                    {%- endif -%}
+                  {% endfor %}
+                </dl>
+              {%- endif -%}
+
               {%- if section.settings.show_social -%}
                 {%- render 'social-icons' -%}
               {%- endif -%}
@@ -215,7 +231,7 @@
   </div>
 
   <div class="footer__content-bottom">
-    <div class="footer__content-bottom-wrapper">
+    <div class="">
       <div class="footer__column footer__localization isolate">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <noscript>
@@ -452,6 +468,12 @@
     {
       "type": "checkbox",
       "id": "show_social",
+      "default": true,
+      "label": "t:sections.footer.settings.show_social.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_hours",
       "default": true,
       "label": "t:sections.footer.settings.show_social.label"
     },

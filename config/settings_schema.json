@@ -8,6 +8,81 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+    "name": "t:settings_schema.hours.name",
+    "settings": [
+      {
+        "type": "text",
+        "id": "day1_label",
+        "label": "t:settings_schema.hours.settings.day.label"
+      },
+      {
+        "type": "text",
+        "id": "day1_hours",
+        "label": "t:settings_schema.hours.settings.hours.label"
+      },
+      {
+        "type": "text",
+        "id": "day2_label",
+        "label": "t:settings_schema.hours.settings.day.label"
+      },
+      {
+        "type": "text",
+        "id": "day2_hours",
+        "label": "t:settings_schema.hours.settings.hours.label"
+      },
+      {
+        "type": "text",
+        "id": "day3_label",
+        "label": "t:settings_schema.hours.settings.day.label"
+      },
+      {
+        "type": "text",
+        "id": "day3_hours",
+        "label": "t:settings_schema.hours.settings.hours.label"
+      },
+      {
+        "type": "text",
+        "id": "day4_label",
+        "label": "t:settings_schema.hours.settings.day.label"
+      },
+      {
+        "type": "text",
+        "id": "day4_hours",
+        "label": "t:settings_schema.hours.settings.hours.label"
+      },
+      {
+        "type": "text",
+        "id": "day5_label",
+        "label": "t:settings_schema.hours.settings.day.label"
+      },
+      {
+        "type": "text",
+        "id": "day5_hours",
+        "label": "t:settings_schema.hours.settings.hours.label"
+      },
+      {
+        "type": "text",
+        "id": "day6_label",
+        "label": "t:settings_schema.hours.settings.day.label"
+      },
+      {
+        "type": "text",
+        "id": "day6_hours",
+        "label": "t:settings_schema.hours.settings.hours.label"
+      },
+      {
+        "type": "text",
+        "id": "day7_label",
+        "label": "t:settings_schema.hours.settings.day.label"
+      },
+      {
+        "type": "text",
+        "id": "day7_hours",
+        "label": "t:settings_schema.hours.settings.hours.label"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.logo.name",
     "settings": [
       {

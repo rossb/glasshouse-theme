@@ -159,6 +159,17 @@
         }
       }
     },
+    "hours": {
+      "name": "Opening Hours",
+      "settings": {
+        "day": {
+          "label": "Day"
+        },
+        "hours": {
+          "label": "Hours"
+        }
+      }
+    },
     "logo": {
       "name": "Logo",
       "settings": {

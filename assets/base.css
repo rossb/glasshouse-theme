@@ -3114,3 +3114,13 @@ button.ctrl-unstyled {
 input {
   font-family: var(--inputs-font-family);
 }
+
+.list-hours {
+  padding: 0;
+  margin: 0;
+}
+.list-hours > * {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #FFFEFD;
+}
