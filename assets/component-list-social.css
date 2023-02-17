@@ -25,3 +25,12 @@
 .list-social__link:hover .icon {
   transform: scale(1.07);
 }
+
+.list-social--large {
+  justify-content: flex-start;
+  margin-left: -1.3rem;
+}
+.list-social--large .list-social__item .icon {
+  height: 3.1rem;
+  width: 3.1rem;
+}

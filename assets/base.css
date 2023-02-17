@@ -1,3 +1,21 @@
+@media screen and (max-width: 749px) {
+  .small-hide {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .medium-hide {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .large-up-hide {
+    display: none !important;
+  }
+}
+
 /* Color custom properties */
 
 :root,
@@ -621,24 +639,6 @@ table:not([class]) td,
 table:not([class]) th {
   padding: 1em;
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
-}
-
-@media screen and (max-width: 749px) {
-  .small-hide {
-    display: none !important;
-  }
-}
-
-@media screen and (min-width: 750px) and (max-width: 989px) {
-  .medium-hide {
-    display: none !important;
-  }
-}
-
-@media screen and (min-width: 990px) {
-  .large-up-hide {
-    display: none !important;
-  }
 }
 
 .left {
@@ -3122,5 +3122,11 @@ input {
 .list-hours > * {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #FFFEFD;
+  border-bottom: 1px solid rgb(245 244 242 / 40%);
+}
+
+@media screen and (min-width: 990px) {
+  .list-hours > * {
+    padding: 0.5rem 0;
+  }
 }

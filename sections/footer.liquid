@@ -14,22 +14,6 @@
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
 
-{%- style -%}
-  .footer {
-  }
-
-  @media screen and (min-width: 750px) {
-    .footer {
-      padding: 11rem 14rem 13rem;
-    }
-
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-
 {%- if section.settings.newsletter_enable -%}
   <div class="newsletter-cta">
     <h2>{{ 'newsletter.title' | t }}</h2>
@@ -114,7 +98,7 @@
               {%- endif -%}
 
               {%- if section.settings.show_social -%}
-                {%- render 'social-icons' -%}
+                {%- render 'social-icons', class_str: 'large-up-hide' -%}
               {%- endif -%}
             </div>
 
@@ -161,11 +145,15 @@
                   {%- if form.posted_successfully? -%}
                     <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
                   {%- endif -%}
+                  {%- if section.settings.newsletter_desc != blank -%}
+                    {{ section.settings.newsletter_desc }}
+                  {%- endif -%}
                 {%- endform -%}
-                {%- if section.settings.newsletter_desc != blank -%}
-                  {{ section.settings.newsletter_desc }}
-                {%- endif -%}
               </div>
+            {%- endif -%}
+
+            {%- if section.settings.show_social -%}
+              {%- render 'social-icons', class_str: 'list-social--large small-hide medium-hide' -%}
             {%- endif -%}
 
             {%- if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
