@@ -2349,14 +2349,29 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .header {
   display: grid;
-  grid-template-areas: 'left-icon heading icons';
+  grid-template-areas: 'heading left-icon icons';
   grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
+  padding: 2.1rem 2.4rem;
+}
+
+@media screen and (max-width: 749px) {
+  body:not(.template-index) .header {
+    position: relative;
+  }
+  body:not(.template-index) .header::before {
+    content: '';
+    position: absolute;
+    left: 2.5rem;
+    right: 2.5rem;
+    bottom: 0;
+    border-bottom: 1px solid rgb(69 74 78 / 30%);
+  }
 }
 
 @media screen and (min-width: 990px) {
   .header {
-    padding: 4rem 6rem;
+    padding: 2rem 6rem;
   }
   .header--top-left,
   .header--middle-left:not(.header--has-menu) {
@@ -2368,8 +2383,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
-    grid-template-columns: auto auto 1fr;
-    column-gap: 2rem;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 1rem;
   }
 
   .header--middle-center {
@@ -2414,7 +2429,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .header__heading-link {
   display: inline-block;
-  padding: 0.75rem;
+  padding: 0;
   text-decoration: none;
   word-break: break-word;
 }
@@ -2429,10 +2444,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .header__heading-logo {
-  height: auto;
-  width: 100%;
-  min-width: 15.6rem;
-  transition: width 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+  height: 2.4rem;
+  width: auto;
 }
 
 @media screen and (max-width: 989px) {
@@ -2455,6 +2468,10 @@ product-info .loading-overlay:not(.hidden) ~ *,
 @media screen and (min-width: 990px) {
   .header__heading-link {
     margin-left: -0.75rem;
+  }
+
+  .header__heading-logo {
+    height: 3.5rem;
   }
 
   .header__heading,
@@ -2501,22 +2518,24 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .header__icon .icon {
-  height: 2rem;
-  width: 2rem;
+  height: 1.6rem;
+  width: auto;
   fill: none;
   vertical-align: middle;
 }
 
-.header__icon,
-.header__icon--cart .icon {
+.header__icon .icon.icon-search {
+  width: 1.5rem;
+}
+
+.header__icon {
   height: 4.4rem;
-  width: 4.4rem;
-  padding: 0;
+  width: auto;
+  padding: 0 2.5rem;
 }
 
 .header__icon--cart {
   position: relative;
-  margin-right: -1.2rem;
 }
 
 @media screen and (max-width: 989px) {
@@ -2551,7 +2570,7 @@ menu-drawer + .header__search {
 }
 
 .header__search {
-  display: inline-flex;
+  display: none;
   line-height: 0;
 }
 
@@ -2564,6 +2583,9 @@ menu-drawer + .header__search {
 }
 
 @media screen and (min-width: 990px) {
+  .header__search {
+    display: inline-flex;
+  }
   .header:not(.header--top-center) * > .header__search,
   .header--top-center > .header__search {
     display: inline-flex;
@@ -2588,14 +2610,21 @@ details[open] .modal-overlay {
   display: block;
 }
 
+.mega-menu[open]::before,
 details[open] .modal-overlay::after {
   position: absolute;
   content: '';
-  background-color: rgb(var(--color-foreground), 0.5);
+  background-color: var(--color-overlay-background);
   top: 100%;
   left: 0;
   right: 0;
   height: 100vh;
+}
+
+.mega-menu[open]::before {
+  position: fixed;
+  top: 0;
+  z-index: -1;
 }
 
 .no-js details[open] > .header__icon--search {
@@ -2708,6 +2737,7 @@ details[open] > .header__submenu {
   margin-left: -1.2rem;
   grid-area: navigation;
   display: none;
+  text-align: right;
 }
 
 .header--top-center .header__inline-menu,
@@ -2738,14 +2768,14 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item {
-  padding: 1.5rem;
+  padding: 1.5rem 3.5rem;
   text-transform: uppercase;
   text-decoration: none;
   color: rgb(var(--color-foreground));
   font-family: var(--font-alt-family);
   font-weight: var(--font-alt-weight-light);
   font-style: var(--font-alt-style);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .header__menu-item:hover {
@@ -2792,7 +2822,7 @@ details[open] > .header__menu-item .icon-caret {
 .global-settings-popup,
 .header__submenu.global-settings-popup {
   border-radius: var(--popup-corner-radius);
-  border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
+  border-color: rgba(var(--popup-border-color), var(--popup-border-opacity));
   border-style: solid;
   border-width: var(--popup-border-width);
   box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity));
