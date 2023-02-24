@@ -2796,7 +2796,7 @@ details[open] > .header__menu-item {
 }
 
 details[open]:hover > .header__menu-item {
-  text-decoration-thickness: 0.2rem;
+  text-decoration-thickness: 0.1rem;
 }
 
 details[open] > .header__menu-item .icon-caret {
@@ -3160,3 +3160,36 @@ input {
     padding: 0.5rem 0;
   }
 }
+
+/* BEGIN CUSTOM SCROLLBARS */
+:root {
+  --color-scrollbar-track: rgb(var(--color-background));
+  --color-scrollbar-thumb: rgba(var(--popup-border-color), var(--popup-border-opacity));
+  --scrollbar-width: .1rem;
+}
+.scrollbar-hide {
+  scrollbar-color: transparent;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+  display: none;
+}
+.scrollbar {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scrollbar::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
+}
+.scrollbar::-webkit-scrollbar-track {
+  background-color: var(--color-scrollbar-track);
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  outline: none;
+  background-color: var(--color-scrollbar-thumb);
+}
+/* END CUSTOM SCROLLBARS */

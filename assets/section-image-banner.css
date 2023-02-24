@@ -245,7 +245,7 @@
 
 @media screen and (min-width: 750px) {
   .banner__content {
-    padding: 5rem;
+    padding: 13.5rem;
   }
 
   .banner__content--top-left {
@@ -305,7 +305,7 @@
 }
 
 .banner__box {
-  padding: 4rem 3.5rem;
+  padding: 0;
   position: relative;
   height: fit-content;
   align-items: center;
@@ -321,7 +321,7 @@
     --color-foreground: 255, 255, 255;
     --color-button: 255, 255, 255;
     --color-button-text: 0, 0, 0;
-    max-width: 89rem;
+    max-width: 54rem;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -373,6 +373,7 @@
 
 .banner__box > *:first-child {
   margin-top: 0;
+  margin-bottom: 5rem;
 }
 
 @media screen and (max-width: 749px) {
@@ -425,7 +426,7 @@
 @media screen and (min-width: 750px) {
   .banner--content-align-center .banner__buttons--multiple > * {
     flex-grow: 1;
-    min-width: 22rem;
+    min-width: 11.6rem;
   }
 
   .banner--content-align-right .banner__buttons--multiple {
