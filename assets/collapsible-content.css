@@ -99,7 +99,7 @@
 
 .collapsible-content summary:hover .accordion__title {
   text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  text-underline-offset: var(--text-underline-offset);
 }
 
 /* check for flexbox gap in older Safari versions */

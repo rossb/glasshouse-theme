@@ -128,7 +128,7 @@
 
 .rte a:not(.button) {
   color: rgba(var(--color-link), var(--alpha-link));
-  text-underline-offset: 0.3rem;
+  text-underline-offset: var(--text-underline-offset);
   text-decoration-thickness: 0.1rem;
   transition: text-decoration-thickness var(--duration-short) ease;
 }

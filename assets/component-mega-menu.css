@@ -40,15 +40,15 @@
 
 .mega-menu__list {
   display: flex;
-  gap: 2.4rem 1rem;
+  gap: 2.5rem;
   list-style: none;
   width: 100%;
   justify-content: flex-end;
 }
 
 .mega-menu__list > li > ul {
-    max-height: 17.5em;
-    overflow: auto;
+  max-height: 22.8em;
+  overflow: auto;
 }
 
 .mega-menu__list > li > ul::before {
@@ -56,9 +56,21 @@
   background: var(--url-icon-scroll-svg);
 }
 
-.mega-menu__content > .mega-menu__heading,
-.mega-menu__list > * {
-  width: calc(100% / 9);
+
+@media screen and (max-width: 1399px) {
+  .mega-menu__content > .mega-menu__heading,
+  .mega-menu__list > * {
+    flex: 1;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+
+  .mega-menu__content > .mega-menu__heading,
+  .mega-menu__list > * {
+    width: calc(100% / 10);
+  }
+
 }
 
 .mega-menu__content > .mega-menu__heading {

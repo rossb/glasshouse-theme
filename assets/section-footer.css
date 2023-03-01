@@ -557,7 +557,7 @@ noscript .localization-selector.link {
   .copyright__content a:hover {
     color: rgb(var(--color-foreground));
     text-decoration: underline;
-    text-underline-offset: 0.3rem;
+    text-underline-offset: var(--text-underline-offset);
   }
 
   .footer-block__details-content .list-menu__item--active:hover {

@@ -229,7 +229,7 @@
 
 .facets__summary:hover span {
   text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  text-underline-offset: var(--text-underline-offset);
 }
 
 .disclosure-has-popup[open] > .facets__summary::before {
@@ -667,7 +667,7 @@ a.active-facets__button.focused .active-facets__button-inner,
 
 .mobile-facets__open:hover .mobile-facets__open-label {
   text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  text-underline-offset: var(--text-underline-offset);
 }
 
 .mobile-facets__open > * + * {
