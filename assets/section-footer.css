@@ -311,7 +311,7 @@ noscript .localization-selector.link {
 }
 
 .newsletter-cta {
-  background-color: #F0EAE2;
+  background-color: #E5E2DC;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -423,17 +423,9 @@ noscript .localization-selector.link {
 @media screen and (min-width: 750px) {
 
   .newsletter-cta {
-    background-color: #675550;
     padding: 14.5rem 7.5rem;
     font-size: 1.6rem;
     line-height: calc(24 / 16);
-  }
-
-  .newsletter-cta .field__input:focus ~ .field__label,
-  .newsletter-cta,
-  .newsletter-cta input,
-  .newsletter-cta > * {
-    color: #F5F4F2;
   }
 
   .newsletter-cta h2 {
@@ -450,15 +442,6 @@ noscript .localization-selector.link {
 
   .newsletter-cta h3 {
     display: none;
-  }
-
-  .newsletter-cta .field__label,
-  .newsletter-cta .customer .field label {
-    color: rgba(245, 244, 242, 0.41);
-  }
-
-  .newsletter-cta .field:after {
-    border-color: #F5F4F2 !important;
   }
 
   .footer__content-top .grid {

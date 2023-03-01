@@ -1,8 +1,14 @@
 .header__icon--menu {
   position: initial;
-  margin-right: -1rem;
+  margin-right: -2.5rem;
   width: 2.5rem;
   box-sizing: content-box;
+}
+
+@media screen and (max-width: 989px) {
+  .header__icon--menu {
+    padding-right: 2.5rem;
+  }
 }
 
 .js menu-drawer > details > summary::before,
@@ -127,7 +133,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__menu-item {
-  padding: 1.1rem 3.2rem;
+  padding: 1.1rem 2.5rem;
   text-decoration: none;
   font-size: 1.8rem;
 }
@@ -158,7 +164,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__menu-item:hover,
 .menu-drawer__close-button:hover {
   color: rgb(var(--color-foreground));
-  background-color: rgba(var(--color-foreground), 0.04);
+  text-decoration: underline;
 }
 
 .menu-drawer__menu-item--active:hover {
@@ -218,8 +224,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__utility-links {
-  padding: 2rem;
-  background-color: rgba(var(--color-foreground), 0.03);
+  padding: 2.5rem;
 }
 
 .menu-drawer__account {
@@ -245,7 +250,6 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer .list-social {
   justify-content: flex-start;
   margin-left: -1.25rem;
-  margin-top: 2rem;
 }
 
 .menu-drawer .list-social:empty {
