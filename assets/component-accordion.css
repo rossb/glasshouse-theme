@@ -34,9 +34,9 @@
   min-height: 1.6rem;
   margin: 0;
   word-break: break-word;
-  font-size: 1.6rem;
-  line-height: calc(26 / 16);
-  letter-spacing: 1.2px;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-1);
   font-family: var(--font-alt-family);
   font-weight: var(--font-alt-weight-normal);
 }
@@ -75,9 +75,6 @@
     padding: 2rem 0;
   }
   .accordion__title {
-    font-size: 2rem;
-    line-height: calc(20 / 16);
-    letter-spacing: 1.2px;
   }
 
 }

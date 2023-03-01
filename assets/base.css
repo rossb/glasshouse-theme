@@ -1,3 +1,210 @@
+:root {
+  --font-body-scale: 1;
+  --font-heading-scale: 1;
+
+  --icon-default-width: 2rem;
+  --icon-default-height: 2rem;
+
+  --letter-spacing-1: 0.6px;
+
+  --font-size-base: 1.6rem;
+  --font-size-desktop-base: 1.6rem;
+  --line-height-tight: 1.3;
+  --line-height-base: calc(24 / 16);
+  --line-height-desktop-base: calc(24 / 16);
+
+  --font-size-rte: 1.6rem;
+  --line-height-rte: calc(24 / 16);
+  --font-size-desktop-rte: var(--font-size-rte);
+  --line-height-desktop-rte: var(--line-height-rte);
+
+  --font-size-hero-text: 2.8rem;
+  --font-size-desktop-hero-text: 5rem;
+  --line-height-hero-text: calc(34 / 28);
+  --line-height-desktop-hero-text: calc(55 / 50);
+
+  --font-size-h0: 2rem;
+  --font-size-desktop-h0: 6rem;
+  --line-height-h0: 1;
+
+  --font-size-h1: 2rem;
+  --font-size-desktop-h1: 6rem;
+  --line-height-h1: calc(22 / 20);
+  --line-height-desktop-h1: calc(70 / 60);
+
+  --font-size-h2: 1.6rem;
+  --font-size-desktop-h2: 2.2rem;
+  --line-height-h2: calc(24 / 20);
+
+  --font-size-h3: 2rem;
+  --line-height-h3: calc(24 / 20);
+  --font-size-desktop-h3: 2rem;
+  --font-h3-weight: 700;
+
+  --font-size-h4: 2rem;
+  --line-height-h4: calc(24 / 20);
+  --font-h4-weight: 400;
+
+  --font-size-h5: 2rem;
+  --line-height-h5: calc(24 / 20);
+  --font-h5-weight: 400;
+
+  --font-size-h6: 2rem;
+  --line-height-h6: calc(24 / 20);
+  --font-h6-weight: 400;
+
+  --font-body-family: 'Practice', 'Georgia', sans-serif;
+  --font-body-style: normal;
+  --font-body-weight: 400;
+  --font-body-weight-bold: 700;
+
+  --font-heading-family: 'PracticeDisplay', sans-serif;
+  --font-heading-style: normal;
+  --font-heading-weight: 700;
+
+  --font-alt-family: "neue-haas-grotesk-display", sans-serif; /* weights: 500,600,700 */
+  --font-alt-style: normal;
+  --font-alt-weight-normal: 600;
+  --font-alt-weight-light: 500;
+
+  --color-base-text: 38, 43, 47;
+  --color-shadow: var(--color-base-text);
+  --color-base-background-1: 245, 244, 242; /* #F5F4F2 */
+  --color-base-background-2: 240, 234, 226; /* #F0EAE2 */
+  --color-base-background-3: 38, 43, 47; /* #262B2F */
+  --color-base-solid-button-labels: 255, 255, 255;
+  --color-base-outline-button-labels: var(--color-base-text);
+  --color-base-accent-1: var(--color-base-text);
+  --color-base-accent-2: var(--color-base-text);
+  --color-overlay-background: rgb(38 43 47 / 80%);
+  --payment-terms-background-color: var(--color-base-background-1);
+
+  --gradient-base-background-1: rgb(var(--color-base-background-1));
+  --gradient-base-background-2: rgb(var(--color-base-background-2));
+  --gradient-base-accent-1: rgb(var(--color-base-accent-1));
+  --gradient-base-accent-2: rgb(var(--color-base-accent-2));
+
+  --media-padding: 0px;
+  --media-border-opacity: 1;
+  --media-border-width: 1px;
+  --media-radius: 0px;
+  --media-shadow-opacity: 1;
+  --media-shadow-horizontal-offset: 0px;
+  --media-shadow-vertical-offset: 0px;
+  --media-shadow-blur-radius: 0px;
+  --media-shadow-visible: 0;
+
+  --product-card-image-padding: 0rem;
+  --product-card-corner-radius: 0rem;
+  --product-card-text-alignment: 'left';
+  --product-card-border-width: 0rem;
+  --product-card-border-opacity: 0.1;
+  --product-card-shadow-opacity: 0.1;
+  --product-card-shadow-visible: 1;
+  --product-card-shadow-horizontal-offset: .4rem;
+  --product-card-shadow-vertical-offset: .4rem;
+  --product-card-shadow-blur-radius: 0rem;
+
+  --collection-card-image-padding: 0rem;
+  --collection-card-corner-radius: 0rem;
+  --collection-card-text-alignment: 'left';
+  --collection-card-border-width: 0rem;
+  --collection-card-border-opacity: 0.1;
+  --collection-card-shadow-opacity: 0.1;
+  --collection-card-shadow-visible: 0;
+  --collection-card-shadow-horizontal-offset: 0rem;
+  --collection-card-shadow-vertical-offset: 0rem;
+  --collection-card-shadow-blur-radius: .5rem;
+
+  --blog-card-image-padding: 0rem;
+  --blog-card-corner-radius: 0rem;
+  --blog-card-text-alignment: 'left';
+  --blog-card-border-width: 0rem;
+  --blog-card-border-opacity: 0.1;
+  --blog-card-shadow-opacity: 0.1;
+  --blog-card-shadow-visible: 0;
+  --blog-card-shadow-horizontal-offset: 0rem;
+  --blog-card-shadow-vertical-offset: .4rem;
+  --blog-card-shadow-blur-radius: .5rem;
+
+  --badge-corner-radius: 4rem;
+
+  --popup-border-width: 1px;
+  --popup-border-color: 37, 43, 46;
+  --popup-border-opacity: .25;
+  --popup-corner-radius: 0px;
+  --popup-shadow-opacity: 0;
+  --popup-shadow-horizontal-offset: 0px;
+  --popup-shadow-vertical-offset: 4px;
+  --popup-shadow-blur-radius: 5px;
+
+  --drawer-border-width: 1px;
+  --drawer-border-opacity: .1;
+  --drawer-shadow-opacity: 0;
+  --drawer-shadow-horizontal-offset: 0px;
+  --drawer-shadow-vertical-offset: 4px;
+  --drawer-shadow-blur-radius: 5px;
+
+  --spacing-sections-desktop: 0px;
+  --spacing-sections-mobile: 0px;
+
+  --grid-desktop-vertical-spacing: 8px;
+  --grid-desktop-horizontal-spacing: 8px;
+  --grid-mobile-vertical-spacing: 4px;
+  --grid-mobile-horizontal-spacing: 4px;
+
+  --text-boxes-border-opacity: 0.1;
+  --text-boxes-border-width: 1px;
+  --text-boxes-radius: 0px;
+  --text-boxes-shadow-opacity: 0;
+  --text-boxes-shadow-visible: 0;
+  --text-boxes-shadow-horizontal-offset: 0px;
+  --text-boxes-shadow-vertical-offset: 0px;
+  --text-boxes-shadow-blur-radius: 0px;
+
+  --buttons-radius: 0;
+  --buttons-radius-outset: 0px;
+  --buttons-border-width: 1px;
+  --buttons-border-opacity: 1;
+  --buttons-shadow-opacity: 1;
+  --buttons-shadow-visible: 1;
+  --buttons-shadow-horizontal-offset: 0px;
+  --buttons-shadow-vertical-offset: 0px;
+  --buttons-shadow-blur-radius: 0px;
+  --buttons-border-offset: 0px;
+  --buttons-height-mobile: 2.7rem;
+  --buttons-height-desktop: 3.6rem;
+  --buttons-font-size-mobile: 1rem;
+  --buttons-line-height-mobile: 1px;
+  --buttons-font-size-desktop: 1.4rem;
+  --buttons-line-height-desktop: 1.4px;
+  --buttons-min-width: 10rem;
+
+  --inputs-font-family: var(--font-body-family);
+  --inputs-shadow-opacity: 1;
+  --inputs-shadow-horizontal-offset: 0px;
+  --inputs-shadow-vertical-offset: 0px;
+  --inputs-shadow-blur-radius: 0px;
+  --inputs-radius-outset: 0px;
+  --inputs-radius: 0px;
+  --inputs-border-width: .1rem;
+  --inputs-margin-offset: 0px;
+  --inputs-border-color: #262B2F;
+  --inputs-padding: .8rem;
+  --inputs-height: var(--buttons-height-desktop);
+  --inputs-color-placeholder: rgba(var(--color-base-text), 0.41);
+
+
+  --variant-pills-radius: 40px;
+  --variant-pills-border-width: 1px;
+  --variant-pills-border-opacity: .55;
+  --variant-pills-shadow-opacity: 0;
+  --variant-pills-shadow-horizontal-offset: 0px;
+  --variant-pills-shadow-vertical-offset: 4px;
+  --variant-pills-shadow-blur-radius: 5px;
+
+}
+
 @media screen and (max-width: 749px) {
   .small-hide {
     display: none !important;
@@ -406,9 +613,9 @@ body,
 }
 
 .text-body {
-  font-size: 1.5rem;
-  letter-spacing: 0.06rem;
-  line-height: calc(1 + 0.8 / var(--font-body-scale));
+  font-size: var(--font-size-base);
+  letter-spacing: normal;
+  line-height: var(--line-height-base);
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
@@ -424,8 +631,17 @@ a {
 }
 
 .hero-text {
-  font-size: 5.6rem;
-  line-height: calc(72 / 56);
+  font-size: var(--font-size-hero-text);
+  line-height: var(--line-height-hero-text);
+  font-family: var(--font-heading-family);
+  font-weight: normal;
+}
+
+@media only screen and (min-width: 750px) {
+  .hero-text {
+    font-size: var(--font-size-desktop-hero-text);
+    line-height: var(--line-height-desktop-hero-text);
+  }
 }
 
 h1,
@@ -452,85 +668,88 @@ h6,
 }
 
 .hxl {
-  /* font-size: calc(var(--font-heading-scale) * 5rem); */
+  font-size: var(--font-size-h0);
+  line-height: var(--line-height-h0);
 }
 
 @media only screen and (min-width: 750px) {
   .hxl {
-    font-size: 9rem;
-    line-height: calc(90 / 80);
+    font-size: var(--font-size-desktop-h0);
   }
 }
 
 .h0 {
-  font-size: calc(var(--font-heading-scale) * 4rem);
+  font-size: var(--font-size-h0);
+  line-height: var(--line-height-h0);
   font-weight: normal;
 }
 
 @media only screen and (min-width: 750px) {
   .h0 {
-    font-size: calc(var(--font-heading-scale) * 5.2rem);
+    font-size: var(--font-size-desktop-h0);
   }
 }
 
 h1,
 .h1 {
-  font-size: 2.2rem;
-  line-height: calc(24 / 22);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
 }
 
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
-    font-size: 5rem;
-    line-height: calc(60 / 50);
+    font-size: var(--font-size-desktop-h1);
+    line-height: var(--line-height-desktop-h1);
   }
 }
 
 h2,
 .h2 {
-  font-size: 2rem;
-  line-height: calc(48 / 20);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
 }
 
 @media only screen and (min-width: 750px) {
   h2,
   .h2 {
-    font-size: 3rem;
-    line-height: calc(48 / 30);
+    font-size: var(--font-size-desktop-h2);
   }
 }
 
 h3,
 .h3 {
-  font-size: 2rem;
-  line-height: calc(24 / 20);
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+  font-weight: var(--font-h3-weight);
 }
 
 @media only screen and (min-width: 750px) {
   h3,
   .h3 {
-    font-size: 2.2rem;
-    line-height: calc(27 / 22);
+    font-size: var(--font-size-desktop-h3);
   }
 }
 
 h4,
 .h4 {
-  font-size: 2rem;
-  line-height: calc(24 / 20);
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+  font-weight: var(--font-h4-weight);
 }
 
 h5,
 .h5 {
   font-size: 2rem;
   line-height: calc(24 / 20);
+  font-weight: var(--font-h5-weight);
 }
 
 h6,
 .h6 {
   font-size: 2rem;
   line-height: calc(24 / 20);
+  font-weight: var(--font-h6-weight);
 }
 
 .h1-alt,
@@ -617,8 +836,8 @@ blockquote {
 .field__input,
 .form__label,
 .select__select {
-  font-size: 2rem;
-  line-height: calc(1 + 0.5 / var(--font-body-scale));
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
   letter-spacing: 0.04rem;
 }
 
@@ -1358,6 +1577,7 @@ button.shopify-payment-button__button--unbranded,
 .customer button,
 button.shopify-payment-button__button--unbranded {
   min-height: var(--buttons-height-mobile);
+  min-width: var(--buttons-min-width);
 }
 
 .shopify-payment-button__button--branded {
@@ -1987,8 +2207,6 @@ input[type='checkbox'] {
 .form__message {
   align-items: center;
   display: flex;
-  font-size: 2rem;
-  line-height: 1;
   margin-top: 1rem;
 }
 .form__message--large {

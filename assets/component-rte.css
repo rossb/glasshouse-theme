@@ -1,20 +1,16 @@
 .rte {
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
+  font-size: var(--font-size-rte);
+  line-height: var(--line-height-rte);
 }
 .rte--small {
-  font-size: 1.6rem;
-  line-height: calc(26 / 16);
 }
 
 @media screen and (min-width: 750px) {
   .rte {
-    font-size: var(--font-size-desktop-base);
-    line-height: var(--line-height-desktop-base);
+    font-size: var(--font-size-desktop-rte);
+    line-height: var(--line-height-desktop-rte);
   }
   .rte--small {
-    font-size: 2rem;
-    line-height: calc(28 / 20);
   }
 }
 
@@ -26,7 +22,7 @@
 
 .rte p {
   margin: 0;
-  margin-bottom: calc(var(--font-size-base) * var(--line-height-base));
+  margin-bottom: calc(var(--font-size-rte) * var(--line-height-rte));
 }
 
 .rte > p:first-child {
@@ -40,7 +36,7 @@
 @media screen and (min-width: 750px) {
   .rte p {
     margin: 0;
-    margin-bottom: calc(var(--font-size-desktop-base) * var(--line-height-desktop-base));
+    margin-bottom: calc(var(--font-size-desktop-rte) * var(--line-height-desktop-rte));
   }
 }
 
@@ -55,6 +51,12 @@
   font-weight: bold;
   margin: 0;
   margin-top: calc(var(--font-size-base) * var(--line-height-base) * 2);
+  line-height: inherit;
+}
+
+.rte h1,
+.rte h2 {
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 750px) {
