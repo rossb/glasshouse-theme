@@ -785,18 +785,25 @@ h6,
 }
 
 .h2-alt {
-  font-size: 2rem;
-  line-height: calc(20 / 16);
+  font-size: 1.4rem;
 }
 
 .h3-alt {
   font-size: 1.4rem;
-  font-weight: 700;
 }
 
 .h4-alt {
   font-size: 1.4rem;
   line-height: calc(22 / 18);
+}
+
+@media screen and (min-width: 750px) {
+
+  .h2-alt {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
 }
 
 blockquote {

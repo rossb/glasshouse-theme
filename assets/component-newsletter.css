@@ -47,9 +47,14 @@
 }
 
 @media screen and (min-width: 990px) {
+
   .newsletter-form__field-wrapper .field {
     margin-bottom: 2rem;
   }
+  .newsletter-form__field-wrapper + p {
+    margin: 0;
+  }
+
 }
 
 .newsletter-form__button {
