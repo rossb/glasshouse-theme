@@ -167,7 +167,7 @@
             {%- for block in section.blocks -%}
               <div class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
                 {%- if block.settings.heading != blank -%}
-                  <h2 class="footer-block__heading h3-alt">{{- block.settings.heading | escape -}}</h2>
+                  <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
                 {%- endif -%}
 
                 {%- case block.type -%}
@@ -208,10 +208,8 @@
         </ul>
       {%- endif -%}
     </div>
-  </div>
 
-  <div class="footer__content-bottom">
-    <div class="">
+    <div class="footer__content-bottom">
       <div class="footer__column footer__localization isolate">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <noscript>
