@@ -16,7 +16,7 @@
 
 {%- if section.settings.newsletter_enable -%}
   <div class="newsletter-cta">
-    <h2>{{ 'newsletter.title' | t }}</h2>
+    <h2 class="h1">{{ 'newsletter.title' | t }}</h2>
     <p>{{ 'newsletter.desc' | t }}</p>
     <h3>{{ 'newsletter.subtitle' | t }}</h3>
     {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}

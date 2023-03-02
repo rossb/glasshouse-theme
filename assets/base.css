@@ -12,9 +12,24 @@
 
   --font-size-base: 1.6rem;
   --font-size-desktop-base: 1.6rem;
+  --line-height-zero: 1.1;
   --line-height-tight: 1.3;
   --line-height-base: calc(24 / 16);
   --line-height-desktop-base: calc(24 / 16);
+
+  --font-body-family: 'Practice', 'Georgia', sans-serif;
+  --font-body-style: normal;
+  --font-body-weight: 400;
+  --font-body-weight-bold: 700;
+
+  --font-heading-family: 'PracticeDisplay', sans-serif;
+  --font-heading-style: normal;
+  --font-heading-weight: 400;
+
+  --font-alt-family: "neue-haas-grotesk-display", sans-serif; /* weights: 500,600,700 */
+  --font-alt-style: normal;
+  --font-alt-weight-normal: 600;
+  --font-alt-weight-light: 500;
 
   --font-size-menu-item: 1.2rem;
 
@@ -57,20 +72,6 @@
   --font-size-h6: 2rem;
   --line-height-h6: calc(24 / 20);
   --font-h6-weight: 400;
-
-  --font-body-family: 'Practice', 'Georgia', sans-serif;
-  --font-body-style: normal;
-  --font-body-weight: 400;
-  --font-body-weight-bold: 700;
-
-  --font-heading-family: 'PracticeDisplay', sans-serif;
-  --font-heading-style: normal;
-  --font-heading-weight: 700;
-
-  --font-alt-family: "neue-haas-grotesk-display", sans-serif; /* weights: 500,600,700 */
-  --font-alt-style: normal;
-  --font-alt-weight-normal: 600;
-  --font-alt-weight-light: 500;
 
   --color-base-text: 38, 43, 47;
   --color-shadow: var(--color-base-text);
@@ -198,7 +199,7 @@
   --inputs-padding: .8rem;
   /* --inputs-height: var(--buttons-height-desktop); */
   --inputs-height: 4.6rem;
-  --inputs-color-placeholder: rgba(var(--color-base-text), 0.41);
+  --inputs-color-placeholder: rgba(var(--color-base-text), 0.78);
 
 
   --variant-pills-radius: 40px;
@@ -2116,14 +2117,14 @@ details[open] > .share-button__fallback {
 .customer .field label {
   font-size: 1.6rem;
   left: 0;
-  bottom: var(--inputs-padding);
+  bottom: 0;
   margin-bottom: 0;
   pointer-events: none;
   position: absolute;
   transition: top var(--duration-short) ease,
     font-size var(--duration-short) ease;
   color: var(--inputs-color-placeholder);
-  line-height: 1.5;
+  line-height: var(--inputs-height);
   font-family: var(--inputs-font-family);
 }
 
@@ -2137,7 +2138,7 @@ details[open] > .share-button__fallback {
   font-size: 1rem;
   top: 0;
   left: 0;
-  /* letter-spacing: 0.01rem; */
+  line-height: var(--line-height-zero);
 }
 
 .field__input:focus,

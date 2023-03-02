@@ -315,29 +315,37 @@ noscript .localization-selector.link {
   display: flex;
   flex-flow: column;
   align-items: center;
-  padding: 3rem 7.5rem;
-  font-size: 1.4rem;
-  line-height: calc(16 / 14);
+  padding: 2.8rem 7.5rem 3.7rem;
   text-align: center;
 }
 
+@media screen and (max-width: 749px) {
+
+  .newsletter-cta {
+    font-size: 1.1rem;
+    line-height: calc(16 / 14);
+  }
+  .newsletter-cta p {
+    max-width: 20em;
+  }
+
+}
+
+
 .newsletter-cta h2 {
-  font-size: 2rem;
-  line-height: calc(24 / 20);
-  font-weight: normal;
-  margin-top: 0;
   margin-bottom: 1.5rem;
 }
 
 .newsletter-cta h3 {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: normal;
-  margin: 2.5rem 0 1rem;
+  margin: 5rem 0 2rem;
   font-family: var(--font-alt-family);
 }
 
 .newsletter-cta form {
-  padding: 0 2.5rem;
+  padding: 0 2rem;
+  max-width: 30rem;
 }
 
 .newsletter-cta input {
@@ -424,18 +432,14 @@ noscript .localization-selector.link {
 
   .newsletter-cta {
     padding: 14.5rem 7.5rem;
-    font-size: 1.6rem;
-    line-height: calc(24 / 16);
   }
 
   .newsletter-cta h2 {
-    font-size: 6rem;
-    line-height: calc(70 / 60);
     margin-bottom: 2rem;
   }
 
   .newsletter-cta form {
-    margin-top: 13.5rem;
+    margin-top: 13rem;
     padding: 0;
     max-width: 38rem;
   }
