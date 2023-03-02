@@ -18,6 +18,9 @@
 .newsletter-form__field-wrapper {
   width: 100%;
 }
+.newsletter-form__field-wrapper + p {
+  margin: 0.7rem 0;
+}
 
 .newsletter-form__field-wrapper .field__input {
   padding-right: 5rem;
@@ -80,16 +83,16 @@
 }
 
 @media screen and (max-width: 749px) {
-  .newsletter-form__field-wrapper .field__input {
+  .newsletter-cta .newsletter-form__field-wrapper .field__input {
     padding-right: 1rem;
     font-size: 1rem;
     height: 3rem;
   }
-  .newsletter-form__field-wrapper .field__label {
+  .newsletter-cta .newsletter-form__field-wrapper .field__label {
     font-size: 1rem;
     line-height: 3rem;
   }
-  .newsletter-form__button .icon {
+  .newsletter-cta .newsletter-form__button .icon {
     width: 0.6rem;
     height: auto;
     transform: translateY(0.3rem);

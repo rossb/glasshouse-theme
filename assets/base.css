@@ -14,8 +14,10 @@
   --font-size-desktop-base: 1.6rem;
   --line-height-zero: 1.1;
   --line-height-tight: 1.3;
-  --line-height-base: calc(24 / 16);
-  --line-height-desktop-base: calc(24 / 16);
+  --line-height-medium: 1.4;
+  --line-height-base: 1.5; /* 24 / 16 */
+  --line-height-desktop-base: var(--line-height-base);
+  --line-height-heading: var(--line-height-tight);
 
   --font-body-family: 'Practice', 'Georgia', sans-serif;
   --font-body-style: normal;
@@ -669,7 +671,7 @@ h6,
   font-weight: var(--font-heading-weight);
   letter-spacing: normal;
   color: rgb(var(--color-foreground));
-  line-height: 1.3;
+  line-height: var(--line-height-heading);
   word-break: break-word;
   margin: 0;
 }
@@ -766,6 +768,7 @@ h6,
   letter-spacing: 1.2;
   font-family: var(--font-alt-family);
   font-weight: var(--font-alt-weight-normal);
+  line-height: var(--line-height-heading);
 }
 
 .h1-alt span,
@@ -786,12 +789,13 @@ h6,
 }
 
 .h3-alt {
-  font-size: 1.8rem;
-  line-height: calc(22 / 18);
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 .h4-alt {
-
+  font-size: 1.4rem;
+  line-height: calc(22 / 18);
 }
 
 blockquote {
@@ -809,14 +813,10 @@ blockquote {
 }
 
 .caption {
-  font-size: 1rem;
-  letter-spacing: 0.07rem;
-  line-height: calc(1 + 0.7 / var(--font-body-scale));
 }
 
 @media screen and (min-width: 750px) {
   .caption {
-    font-size: 1.2rem;
   }
 }
 
