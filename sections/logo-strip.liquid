@@ -1,4 +1,4 @@
-<style>
+{%- style -%}
   .logostrip {
     background: rgb(var(--color-base-background-4));
     padding: 3.5rem 2.5rem 4.4rem;
@@ -21,7 +21,8 @@
     width: 100%;
     height: auto;
   }
-</style>
+{%- endstyle -%}
+
 <div class="logostrip section-{{ section.id }}-padding small-hide medium-hide">
   {% if section.settings.title != blank %}
     <p class="logostrip__title link-simple">{{ section.settings.title }}</p>

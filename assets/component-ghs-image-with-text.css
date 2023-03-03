@@ -1,3 +1,6 @@
+.ghs-image-with-text {
+  overflow: hidden;
+}
 .ghs-image-with-text .image-with-text__text a {
   text-decoration: none;
 }

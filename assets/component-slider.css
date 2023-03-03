@@ -266,7 +266,8 @@ slider-component.slider-component-full-width {
 }
 
 .slider-counter__link {
-  padding: 1rem;
+  padding: 1rem 0.7rem;
+  font-size: var(--font-size-small);
 }
 
 @media screen and (max-width: 749px) {
@@ -306,11 +307,11 @@ slider-component.slider-component-full-width {
 .slider-counter__link--active.slider-counter__link--numbers,
 .slider-counter__link--dots:not(.slider-counter__link--active):hover .dot,
 .slider-counter__link--numbers:hover {
-  transform: scale(1.1);
+
 }
 
 .slider-counter__link--numbers {
-  color: rgba(var(--color-foreground), 0.5);
+  color: rgba(var(--color-foreground), 1);
   text-decoration: none;
 }
 
