@@ -39,6 +39,48 @@
         "show_text_below": false
       }
     },
+    "4401d9a3-09c7-4460-9372-c30dda20b1fd": {
+      "type": "ghs-image-with-text",
+      "blocks": {
+        "template--17925350031666__4401d9a3-09c7-4460-9372-c30dda20b1fd-16777929051a732bfd-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>139 MARE STREET, Hackney<br\/>East London, E8 3RH<\/strong><br\/><em>(+44) 020 8533 4206<br\/><\/em><a href=\"mailto:info@glasshousesalon.co.uk\" title=\"mailto:info@glasshousesalon.co.uk\"><em>info@glasshousesalon.co.uk<\/em><\/a><\/p>"
+          }
+        },
+        "template--17925350031666__4401d9a3-09c7-4460-9372-c30dda20b1fd-16777929051a732bfd-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Book now",
+            "button_link_1": "#",
+            "button_style_secondary_1": true,
+            "button_label_2": "Services",
+            "button_link_2": "#",
+            "button_style_secondary_2": true
+          }
+        },
+        "template--17925350031666__4401d9a3-09c7-4460-9372-c30dda20b1fd-16777929051a732bfd-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "London’s original destination for organic, natural and sustainable hair & beauty",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--17925350031666__4401d9a3-09c7-4460-9372-c30dda20b1fd-16777929051a732bfd-1",
+        "template--17925350031666__4401d9a3-09c7-4460-9372-c30dda20b1fd-16777929051a732bfd-2",
+        "template--17925350031666__4401d9a3-09c7-4460-9372-c30dda20b1fd-16777929051a732bfd-0"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/HOME_Hero_Image.jpg",
+        "height": "adapt",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left"
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -204,6 +246,7 @@
   },
   "order": [
     "image_banner",
+    "4401d9a3-09c7-4460-9372-c30dda20b1fd",
     "rich_text",
     "featured_collection",
     "collage",

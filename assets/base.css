@@ -20,16 +20,20 @@
   --line-height-desktop-base: var(--line-height-base);
   --line-height-heading: var(--line-height-tight);
 
-  --font-body-family: 'Practice', 'Georgia', sans-serif;
+  --font-stack-practise: 'Practice', 'Georgia', sans-serif; /* 400, italic */
+  --font-stack-practise-display: 'PracticeDisplay', 'Georgia', sans-serif; /* 400,700 */
+  --font-stack-neue: "neue-haas-grotesk-display", sans-serif; /* 500,600,700 */
+
+  --font-body-family: var(--font-stack-practise-display);
   --font-body-style: normal;
   --font-body-weight: 400;
   --font-body-weight-bold: 700;
 
-  --font-heading-family: 'PracticeDisplay', sans-serif;
+  --font-heading-family: var(--font-stack-practise-display);
   --font-heading-style: normal;
   --font-heading-weight: 400;
 
-  --font-alt-family: "neue-haas-grotesk-display", sans-serif; /* weights: 500,600,700 */
+  --font-alt-family: var(--font-stack-neue);
   --font-alt-style: normal;
   --font-alt-weight-normal: 600;
   --font-alt-weight-light: 500;
@@ -77,6 +81,7 @@
   --font-h6-weight: 400;
 
   --color-base-text: 38, 43, 47;
+  --border-color: rgba(var(--color-base-text), 0.4);
   --color-shadow: var(--color-base-text);
   --color-base-background-1: 245, 244, 242; /* #F5F4F2 */
   --color-base-background-2: 240, 234, 226; /* #F0EAE2 */
@@ -85,7 +90,7 @@
   --color-base-outline-button-labels: var(--color-base-text);
   --color-base-accent-1: var(--color-base-text);
   --color-base-accent-2: var(--color-base-text);
-  --color-overlay-background: rgb(38 43 47 / 80%);
+  --color-overlay-background: rgba(var(--color-base-text), .8);
   --payment-terms-background-color: var(--color-base-background-1);
 
   --gradient-base-background-1: rgb(var(--color-base-background-1));
@@ -187,6 +192,7 @@
   --buttons-line-height-mobile: 1px;
   --buttons-font-size-desktop: 1.4rem;
   --buttons-line-height-desktop: 1.4px;
+  --buttons-min-width-mobile: 8rem;
   --buttons-min-width: 10rem;
 
   --inputs-font-family: var(--font-body-family);
@@ -1593,7 +1599,7 @@ button.shopify-payment-button__button--unbranded,
 .customer button,
 button.shopify-payment-button__button--unbranded {
   min-height: var(--buttons-height-mobile);
-  min-width: var(--buttons-min-width);
+  min-width: var(--buttons-min-width-mobile);
 }
 
 .shopify-payment-button__button--branded {
