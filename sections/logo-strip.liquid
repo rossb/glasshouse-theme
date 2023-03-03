@@ -1,0 +1,90 @@
+<style>
+  .logostrip {
+    background: rgb(var(--color-base-background-4));
+    padding: 3.5rem 2.5rem 4.4rem;
+  }
+  .logostrip__title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .logostrip__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+  }
+  .logostrip__inner > * {
+    max-width: calc((100% - (1.8rem * 7)) / 8);
+  }
+  .logostrip__inner img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+<div class="logostrip section-{{ section.id }}-padding small-hide medium-hide">
+  {% if section.settings.title != blank %}
+    <p class="logostrip__title link-simple">{{ section.settings.title }}</p>
+  {% endif %}
+  <div class="logostrip__inner">
+    {%- for block in section.blocks -%}
+      <div
+        class=""
+        {{ block.shopify_attributes }}
+      >
+        {%- if block.settings.image != blank -%}
+          {%- capture sizes -%}
+            {{ block.settings.image.width }}px
+          {%- endcapture -%}
+          {{
+            block.settings.image
+            | image_url: width: block.settings.image.width
+            | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500', alt: block.settings.title
+          }}
+        {%- else -%}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "GHS: Logo strip",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Featured In"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Alt text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "GHS: Logo strip",
+      "blocks": [
+      ]
+    }
+  ]
+}
+{% endschema %}

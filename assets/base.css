@@ -7,6 +7,7 @@
 
   --letter-spacing-1: 0.6px;
   --letter-spacing-2: 0.1em;
+  --letter-spacing-3: 0.02em;
   --text-underline-offset: 0.1rem;
   --text-underline-offset-big: 0.3rem;
 
@@ -84,6 +85,7 @@
   --line-height-h6: var(--line-height-tighter);
   --font-h6-weight: 400;
 
+  --color-off-white: 249, 249, 249;
   --color-base-text: 38, 43, 47;
   --border-color: rgba(var(--color-base-text), 0.4);
   --color-shadow: var(--color-base-text);
@@ -91,6 +93,7 @@
   --color-light-text: var(--color-base-background-1);
   --color-base-background-2: 240, 234, 226; /* #F0EAE2 */
   --color-base-background-3: 38, 43, 47; /* #262B2F */
+  --color-base-background-4: var(--color-off-white);
   --color-base-solid-button-labels: 255, 255, 255;
   --color-base-outline-button-labels: var(--color-base-text);
   --color-base-accent-1: var(--color-base-text);
@@ -1041,6 +1044,15 @@ h6:empty {
   width: 1.5rem;
   margin-left: 1rem;
 }
+
+.link-simple {
+  text-decoration: underline;
+  font-size: var(--font-size-small);
+  font-family: var(--font-alt-family);
+  font-weight: var(--font-alt-weight-light);
+  letter-spacing: var(--letter-spacing-3);
+}
+
 
 a:not([href]) {
   cursor: not-allowed;
