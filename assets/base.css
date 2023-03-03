@@ -198,7 +198,7 @@
   --buttons-font-size-desktop: 1.4rem;
   --buttons-line-height-desktop: 1.4px;
   --buttons-min-width-mobile: 8rem;
-  --buttons-min-width: 10rem;
+  --buttons-min-width-desktop: 11.5rem;
 
   --inputs-font-family: var(--font-body-family);
   --inputs-shadow-opacity: 1;
@@ -467,6 +467,48 @@
   --shadow-blur-radius: var(--media-shadow-blur-radius);
   --shadow-opacity: var(--media-shadow-opacity);
   --shadow-visible: var(--media-shadow-visible);
+}
+
+@media screen and (min-width: 750px) {
+
+  .medium-up-color-inverse {
+    --color-foreground: var(--color-base-background-1);
+    --color-background: var(--color-base-text);
+    --gradient-background: rgb(var(--color-base-text));
+    --inputs-border-color: rgb(var(--color-base-background-1));
+    --inputs-color-placeholder: rgba(var(--color-base-background-1), 0.41);
+  }
+
+  .medium-up-color-inverse {
+    --color-link: var(--color-foreground);
+    --alpha-link: 1;
+  }
+
+  .medium-up-color-inverse {
+    --color-button: var(--color-foreground);
+    --color-button-text: var(--color-background);
+  }
+
+  .medium-up-color-inverse .button--secondary {
+    --color-button: var(--color-background);
+    --color-button-text: var(--color-foreground);
+  }
+
+  .medium-up-color-inverse .button--tertiary {
+    --color-button: var(--color-foreground);
+    --color-button-text: var(--color-foreground);
+  }
+
+  .medium-up-color-inverse {
+    --color-badge-background: var(--color-background);
+    --color-badge-border: var(--color-background);
+    --alpha-badge-border: 1;
+  }
+
+  .medium-up-color-inverse {
+    --color-card-hover: var(--color-base-background-1);
+  }
+
 }
 
 @media screen and (min-width: 990px) {
@@ -1805,6 +1847,7 @@ button.shopify-payment-button__button--unbranded {
   .customer button,
   button.shopify-payment-button__button--unbranded {
     min-height: var(--buttons-height-desktop);
+    min-width: var(--buttons-min-width-desktop);
   }
 
 }
