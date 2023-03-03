@@ -2,6 +2,7 @@
   "sections": {
     "image_banner": {
       "type": "image-banner",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -63,7 +64,7 @@
           "type": "heading",
           "settings": {
             "heading": "London’s original destination for organic, natural and sustainable hair & beauty",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         }
       },
@@ -75,9 +76,8 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/HOME_Hero_Image.jpg",
         "height": "adapt",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "color_scheme": "background-1",
+        "desktop_content_alignment": "center",
+        "color_scheme": "transparent",
         "mobile_content_alignment": "left"
       }
     },
