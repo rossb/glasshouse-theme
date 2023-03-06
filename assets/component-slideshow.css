@@ -210,8 +210,8 @@ slideshow-component:not(.page-width) .slider-buttons {
 /* Custom */
 
 .slideshow-section {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
 }
 .slideshow-section .slider-button--prev,
 .slideshow-section .slider-button--next {
@@ -221,8 +221,8 @@ slideshow-component:not(.page-width) .slider-buttons {
 @media screen and (min-width: 750px) {
 
   .slideshow-section {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
   }
 
 }

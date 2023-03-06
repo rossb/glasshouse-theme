@@ -82,19 +82,7 @@
               {%- endif -%}
 
               {%- if section.settings.show_hours -%}
-                <h2 class="footer-block__heading h2-alt">{{ 'hours.label' | t }}</h2>
-                <dl class="list-hours">
-                  {% for i in (1..7) %}
-                    {% assign label_key = 'day' | append: i | append: '_label' %}
-                    {% assign hours_key = 'day' | append: i | append: '_hours' %}
-                    {%- if settings[label_key] != blank -%}
-                      <div>
-                        <dt>{{ settings[label_key] }}</dt>
-                        <dd>{{ settings[hours_key] }}</dd>
-                      </div>
-                    {%- endif -%}
-                  {% endfor %}
-                </dl>
+                {% render 'ghs-opening-hours' %}
               {%- endif -%}
 
               {%- if section.settings.show_social -%}

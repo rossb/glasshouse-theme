@@ -1,0 +1,153 @@
+{{ 'ghs-section-multicolumn.css' | asset_url | stylesheet_tag }}
+{{ 'component-rte.css' | asset_url | stylesheet_tag }}
+
+<div class="ghs-multicolumn multicolumn page-width small-hide medium-hide section-{{ section.id }}">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'column' %}
+        <div class="ghs-multicolumn__column">
+          <h2 class="hero-text">{{ block.settings.title }}</h2>
+          <div class="rte">
+            {{ block.settings.text }}
+          </div>
+          <div class="ghs-multicolumn__links">
+            <a href="{{ block.settings.link1 }}">{{ block.settings.link1_label }}</a>
+            <a href="{{ block.settings.link2 }}">{{ block.settings.link2_label }}</a>
+          </div>
+        </div>
+      {% when 'info-column' %}
+        <div class="ghs-multicolumn__info-column">
+          <div class="ghs-multicolumn__address rte">
+            {{ block.settings.text }}
+          </div>
+          {% if block.settings.show_opening_hours %}
+            {% render 'ghs-opening-hours' %}
+          {% endif %}
+          <div class="ghs-multicolumn__buttons">
+            <a href="{{ block.settings.button_link_1 }}">{{ block.settings.button_label_1 }}</a>
+            <a href="{{ block.settings.button_link_2 }}">{{ block.settings.button_label_2 }}</a>
+          </div>
+        </div>
+    {% endcase %}
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "GHS: Multi-column",
+  "class": "section",
+  "tag": "section",
+  "max_blocks": 2,
+  "settings": [
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "t:sections.multicolumn.blocks.column.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label",
+          "default": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+        {
+          "type": "text",
+          "id": "link1_label",
+          "label": "t:sections.multicolumn.blocks.column.settings.link_label.label"
+        },
+        {
+          "type": "url",
+          "id": "link1",
+          "label": "t:sections.multicolumn.blocks.column.settings.link.label"
+        },
+        {
+          "type": "text",
+          "id": "link2_label",
+          "label": "t:sections.multicolumn.blocks.column.settings.link_label.label"
+        },
+        {
+          "type": "url",
+          "id": "link2",
+          "label": "t:sections.multicolumn.blocks.column.settings.link.label"
+        }
+      ]
+    },
+    {
+      "type": "info-column",
+      "name": "Info Column",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_opening_hours",
+          "label": "Show opening hours?",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "default": "Button label",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_1",
+          "default": false,
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "default": "Button label",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_2",
+          "default": false,
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "GHS: Multi-column",
+      "blocks": [
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
