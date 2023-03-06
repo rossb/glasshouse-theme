@@ -19,6 +19,7 @@
 
   --font-size-base: 1.6rem;
   --font-size-small: 1.4rem;
+  --font-size-xsmall: 1rem;
   --font-size-desktop-base: 1.6rem;
   --line-height-zero: 1.1428;
   --line-height-tighter: 1.2;
@@ -587,15 +588,16 @@ html.no-js .no-js-hidden {
   padding: 0 var(--page-sidepad);
 }
 
+.page-width-dbl {
+  padding: 0 calc(var(--page-sidepad) * 2);
+}
+
 .page-width-desktop {
   padding: 0;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 750px) {
-  .page-width {
-    padding: 0 var(--page-sidepad);
-  }
 
   .page-width--narrow {
     padding: 0 9rem;
@@ -730,6 +732,35 @@ body,
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
+}
+
+/* ul, ol, dl */
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* input, textarea, button */
+.ctrl-unstyled {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: auto;
+  line-height: inherit;
+  min-width: 1px;
+  color: inherit;
+}
+button.ctrl-unstyled {
+  cursor: pointer;
 }
 
 p {
@@ -1056,6 +1087,11 @@ h6:empty {
   letter-spacing: var(--letter-spacing-3);
 }
 
+@media screen and (max-width: 749px) {
+  .link-simple {
+    font-size: var(--font-size-xsmall);
+  }
+}
 
 a:not([href]) {
   cursor: not-allowed;
@@ -3503,34 +3539,6 @@ details-disclosure > details {
 }
 .icon[height] {
   height: auto;
-}
-
-.list-unstyled {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* input, textarea, button */
-.ctrl-unstyled {
-  margin: 0;
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-style: inherit;
-  font-size: inherit;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  height: auto;
-  line-height: inherit;
-  min-width: 1px;
-  color: inherit;
-}
-button.ctrl-unstyled {
-  cursor: pointer;
 }
 
 input {

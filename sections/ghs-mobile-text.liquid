@@ -1,0 +1,80 @@
+{% if section.settings.text_first != blank %}
+  <div class="readmore rte page-width page-width-dbl medium-hide large-up-hide section-{{ section.id }}">
+    {{ section.settings.text_first }}
+    {% if section.settings.text_more %}
+      <div class="readmore__more rte" hidden>
+        {{ section.settings.text_more }}
+      </div>
+      <button class="readmore__btn ctrl-unstyled link-simple">
+        <span>{{ section.settings.readmore_label }}</span>
+        <span hidden>{{ section.settings.readless_label }}</span>
+      </button>
+    {% endif %}
+  </div>
+
+  <script>
+    const moreBtn = document.querySelector('.section-{{ section.id }} .readmore__btn');
+    const moreTxt = document.querySelector('.section-{{ section.id }} .readmore__more');
+    moreBtn.addEventListener('click', event => {
+      event.preventDefault();
+      moreBtn.classList.toggle('is-open');
+      moreTxt.hidden = !moreTxt.hidden;
+      moreBtn.querySelectorAll('span').forEach(span => {
+        span.hidden = !span.hidden;
+      });
+    });
+  </script>
+
+  <style>
+    .readmore {
+      margin: 5rem 0 7rem;
+    }
+    .readmore__btn {
+      margin-top: 5rem;
+    }
+    .readmore__btn:after {
+      content: ' +';
+    }
+    .readmore__btn.is-open:after {
+      content: ' -';
+    }
+  </style>
+{% endif %}
+
+{% schema %}
+{
+  "name": "GHS: Mobile-only text",
+  "class": "section",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text_first",
+      "label": "Visible text",
+      "info": "Text visible before the \"read more\" link"
+    },
+    {
+      "type": "richtext",
+      "id": "text_more",
+      "label": "Read more text",
+      "info": "Text visible after clicking \"read more\""
+    },
+    {
+      "type": "text",
+      "id": "readmore_label",
+      "label": "Read more link label",
+      "default": "Read more"
+    },
+    {
+      "type": "text",
+      "id": "readless_label",
+      "label": "Read less link label",
+      "default": "Read less"
+    }
+  ],
+  "presets": [
+    {
+      "name": "GHS: Mobile-only text"
+    }
+  ]
+}
+{% endschema %}
