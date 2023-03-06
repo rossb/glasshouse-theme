@@ -241,3 +241,8 @@
   width: calc(100% / 10 * 3);
   margin-left: calc(100% / 10 * 1);
 }
+
+.ghs-multicolumn__info-heading {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}

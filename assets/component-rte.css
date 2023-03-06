@@ -10,8 +10,6 @@
     font-size: var(--font-size-desktop-rte);
     line-height: var(--line-height-desktop-rte);
   }
-  .rte--small {
-  }
 }
 
 .rte:after {

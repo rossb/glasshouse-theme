@@ -81,9 +81,9 @@
   --line-height-h4: var(--line-height-tighter);
   --font-h4-weight: 400;
 
-  --font-size-h5: 2rem;
+  --font-size-h5: 1.6rem;
   --line-height-h5: var(--line-height-tighter);
-  --font-h5-weight: 400;
+  --font-h5-weight: 700;
 
   --font-size-h6: 1.8rem;
   --line-height-h6: var(--line-height-tighter);
@@ -92,6 +92,7 @@
   --color-off-white: 249, 249, 249;
   --color-base-text: 38, 43, 47;
   --border-color: rgba(var(--color-base-text), 0.4);
+  --border-color-light: rgb(245 244 242 / 40%);
   --color-shadow: var(--color-base-text);
   --color-base-background-1: 245, 244, 242; /* #F5F4F2 */
   --color-light-text: var(--color-base-background-1);
@@ -272,6 +273,7 @@
   --gradient-background: rgb(var(--color-base-text));
   --inputs-border-color: rgb(var(--color-base-background-1));
   --inputs-color-placeholder: rgba(var(--color-base-background-1), 0.41);
+  --border-color: var(--border-color-light);
 }
 
 .color-accent-1 {
@@ -875,15 +877,15 @@ h3,
 
 h4,
 .h4 {
-  font-size: var(--font-size-h3);
-  line-height: var(--line-height-h3);
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
   font-weight: var(--font-h4-weight);
 }
 
 h5,
 .h5 {
-  font-size: 2rem;
-  line-height: calc(24 / 20);
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
   font-weight: var(--font-h5-weight);
 }
 
@@ -3552,12 +3554,20 @@ input {
 .list-hours > * {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgb(245 244 242 / 40%);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.list-hours--small dt {
+  font-size: var(--font-size-small);
+  line-height: 1.8;
 }
 
 @media screen and (min-width: 990px) {
   .list-hours > * {
     padding: 0.5rem 0;
+  }
+  .list-hours--small > * {
+    padding: 0;
   }
 }
 

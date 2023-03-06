@@ -21,11 +21,12 @@
             {{ block.settings.text }}
           </div>
           {% if block.settings.show_opening_hours %}
-            {% render 'ghs-opening-hours' %}
+            <h3 class="ghs-multicolumn__info-heading h5">{{ block.settings.hours_title }}</h3>
+            {% render 'ghs-opening-hours', class_str: 'list-hours--small' %}
           {% endif %}
           <div class="ghs-multicolumn__buttons">
-            <a href="{{ block.settings.button_link_1 }}">{{ block.settings.button_label_1 }}</a>
-            <a href="{{ block.settings.button_link_2 }}">{{ block.settings.button_label_2 }}</a>
+            <a class="button" href="{{ block.settings.button_link_1 }}">{{ block.settings.button_label_1 }}</a>
+            <a class="button" href="{{ block.settings.button_link_2 }}">{{ block.settings.button_label_2 }}</a>
           </div>
         </div>
     {% endcase %}
@@ -96,6 +97,12 @@
           "id": "show_opening_hours",
           "label": "Show opening hours?",
           "default": true
+        },
+        {
+          "type": "text",
+          "id": "hours_title",
+          "label": "Hours label",
+          "default": "Hours"
         },
         {
           "type": "text",

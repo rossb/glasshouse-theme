@@ -1,5 +1,4 @@
-<h2 class="footer-block__heading h2-alt">{{ 'hours.label' | t }}</h2>
-<dl class="list-hours">
+<dl class="list-hours {{ class_str }}">
   {% for i in (1..7) %}
     {% assign label_key = 'day' | append: i | append: '_label' %}
     {% assign hours_key = 'day' | append: i | append: '_hours' %}

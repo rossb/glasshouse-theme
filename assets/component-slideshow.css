@@ -221,6 +221,15 @@ slideshow-component:not(.page-width) .slider-buttons {
 @media screen and (min-width: 750px) {
 
   .slideshow-section {
+    margin-top: 5rem;
+    margin-bottom: 2.3rem;
+  }
+
+}
+
+@media screen and (min-width: 990px) {
+
+  .slideshow-section {
     margin-top: 12rem;
     margin-bottom: 12rem;
   }

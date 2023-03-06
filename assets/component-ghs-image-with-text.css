@@ -85,5 +85,25 @@
   .ghs-image-with-text .banner__buttons {
     gap: 2.3rem;
   }
-
+  .ghs-multicolumn__column .hero-text {
+    margin-bottom: 5.5rem;
+  }
+  .ghs-multicolumn__links a:after {
+    content: ' >';
+  }
+  .ghs-multicolumn__links {
+    margin-top: calc(var(--font-size-desktop-base) * var(--line-height-desktop-base) * 2);
+    display: flex;
+    gap: 3rem;
+  }
+  .ghs-multicolumn__buttons {
+    display: flex;
+    gap: 2rem;
+  }
+  .ghs-multicolumn .ghs-multicolumn__buttons .button {
+    margin-top: 5rem;
+  }
+  .ghs-multicolumn__address a {
+    text-decoration: none;
+  }
 }
