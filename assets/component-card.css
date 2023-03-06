@@ -83,6 +83,7 @@
   text-align: center;
   align-items: center;
   column-gap: 1ex;
+  margin-top: 0.9rem;
 }
 
 .card__media,
