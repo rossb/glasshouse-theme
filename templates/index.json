@@ -1,45 +1,5 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "disabled": true,
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "London’s original destination for organic, natural and sustainable hair & beauty",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop now",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "Book now",
-            "button_link_2": "https:\/\/phorest.com\/book\/salons\/glasshousesalon",
-            "button_style_secondary_2": true
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "button"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/HOME_Hero_Image.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "transparent",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
     "4401d9a3-09c7-4460-9372-c30dda20b1fd": {
       "type": "ghs-image-with-text",
       "blocks": {
@@ -75,119 +35,11 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/HOME_Hero_Image.jpg",
+        "text_color": "light",
         "height": "adapt",
         "desktop_content_alignment": "center",
         "color_scheme": "transparent",
         "mobile_content_alignment": "left"
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Talk about your brand<\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "multicolumn": {
@@ -242,15 +94,159 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "f11a1e73-9dc9-4113-bdce-c8d7067ac1e5": {
+      "type": "slideshow",
+      "blocks": {
+        "template--17925350031666__f11a1e73-9dc9-4113-bdce-c8d7067ac1e5-1677869565f1ef0b61-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GlassHouse35mm7.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "template--17925350031666__f11a1e73-9dc9-4113-bdce-c8d7067ac1e5-1677869565f1ef0b61-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GlassHouseSalon1.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "d7f0ff0d-0b50-46bd-9465-7ebd5e7bed78": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GlassHouseSalon3_copy.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--17925350031666__f11a1e73-9dc9-4113-bdce-c8d7067ac1e5-1677869565f1ef0b61-0",
+        "template--17925350031666__f11a1e73-9dc9-4113-bdce-c8d7067ac1e5-1677869565f1ef0b61-1",
+        "d7f0ff0d-0b50-46bd-9465-7ebd5e7bed78"
+      ],
+      "settings": {
+        "layout": "grid",
+        "slide_height": "adapt_image",
+        "slider_visual": "numbers",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "4dd67df2-6cf0-4dbc-b6b8-4078f8959c76": {
+      "type": "logo-strip",
+      "blocks": {
+        "b299b92d-8a77-40de-80b3-66830187716d": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PR_Vouge_440x_9a739cad-4b04-4c6d-9ba1-1f07fa55cfdb.svg",
+            "title": "Vogue"
+          }
+        },
+        "e7e40587-e9e7-41ea-ad7d-3f8ff8d3ac1f": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/i-D_logo_1334x_01eb1d59-f690-4a2e-9be9-32430c3c4ece.svg",
+            "title": "i-D"
+          }
+        },
+        "1a84eece-cb20-417f-8c7f-e2025dff1e39": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Fabled_Logo_440x_0b624fa9-b1c6-47a6-84ab-67f0e93c7a36.svg",
+            "title": "Fabled by Marie Claire"
+          }
+        },
+        "016e55dc-1eae-48e8-b161-45e19aaa2c9f": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Grazia_Logo_440x_ef07268c-cc2b-44f3-be27-59e7ee218b3c.svg",
+            "title": "Grazia"
+          }
+        },
+        "078c8b36-bebb-4d10-b55e-d0919b6edd7c": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PRESS_0000_telegraph_440x_1adc1e88-8458-4cf9-80f0-f00a52776b01.svg",
+            "title": "The Times"
+          }
+        },
+        "28a0bcc7-634b-4b8d-b2c5-3c9b0e562acb": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PR_LSM_440x_e81c201f-0212-43bc-91c4-03c55740e0bb.svg",
+            "title": "LSMM: the London school of media make up"
+          }
+        },
+        "d42cca56-071c-418f-a153-00aea1a3fd0c": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PRESS_Monocle_440x..svg",
+            "title": "Monocle"
+          }
+        },
+        "e59ecef8-2667-40f0-8d65-e975c6cbfa96": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vanity_Fair_logo_440x_dcdd4818-fa8a-4d93-a3ef-96496213ee46.svg",
+            "title": "Vanity Fair"
+          }
+        }
+      },
+      "block_order": [
+        "b299b92d-8a77-40de-80b3-66830187716d",
+        "e7e40587-e9e7-41ea-ad7d-3f8ff8d3ac1f",
+        "1a84eece-cb20-417f-8c7f-e2025dff1e39",
+        "016e55dc-1eae-48e8-b161-45e19aaa2c9f",
+        "078c8b36-bebb-4d10-b55e-d0919b6edd7c",
+        "28a0bcc7-634b-4b8d-b2c5-3c9b0e562acb",
+        "d42cca56-071c-418f-a153-00aea1a3fd0c",
+        "e59ecef8-2667-40f0-8d65-e975c6cbfa96"
+      ],
+      "settings": {
+        "title": "Featured In"
+      }
     }
   },
   "order": [
-    "image_banner",
     "4401d9a3-09c7-4460-9372-c30dda20b1fd",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "multicolumn",
+    "f11a1e73-9dc9-4113-bdce-c8d7067ac1e5",
+    "4dd67df2-6cf0-4dbc-b6b8-4078f8959c76"
   ]
 }
