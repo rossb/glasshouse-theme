@@ -42,57 +42,47 @@
         "mobile_content_alignment": "left"
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
+    "86baf03b-db9c-4332-b6c9-69883c936624": {
+      "type": "ghs-mobile-text",
+      "settings": {
+        "text_first": "<p>Glasshouse specialise in products, services and treatments with maximum benefit to the hair, skin and body and minimum impact to the environment. We bring together experts in the fields of hair, beauty and spirituality that work to nourish and support the mind and body as one. As a sustainably-minded salon, all of our therapies and services have been developed with care and craft, founded on a belief that beauty and wellbeing is elevated in support of ourselves and the natural world.<\/p>",
+        "text_more": "<p>We are specialists in the Organic Colour Systems range because they create beautiful hair colours, whilst helping minimise the impact to your hair and the environment. In store and online we stock a range of clean, gentle and highly effective beauty, wellbeing and lifestyle brands that prioritise gentle, nourishing and natural ingredients and avoid any harsh or damaging chemical additives. The combination of our technical skills and the naturally enriching products we use ensure emphasis on the long-term condition of your hair and skin. <br\/><br\/><a href=\"\/pages\/therapy-room\" title=\"Therapy Room\">Therapy Room &gt;<\/a><br\/><a href=\"\/pages\/products-ethos\" title=\"Products + Ethos\">Products + Ethos &gt;<\/a><\/p>",
+        "readmore_label": "Read more"
+      }
+    },
+    "63e385b7-5b9d-4f53-93a1-7c57da66924b": {
+      "type": "ghs-multicolumn",
       "blocks": {
-        "column1": {
+        "template--17925350031666__63e385b7-5b9d-4f53-93a1-7c57da66924b-16781132120482b109-0": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "title": "We specialise in products, services and treatments with maximum benefit to the hair, skin and body and minimum impact to the environment.",
+            "text": "<p>Glasshouse is London’s destination for sustainable hair, beauty and wellbeing based in London Fields,  Hackney. We bring together experts in the fields of hair, beauty and spirituality that work to nourish and support the mind and body as one. As a sustainably-minded salon, all of our therapies and services have been developed with care and craft, founded on a belief that beauty and wellbeing is elevated in support of ourselves and the natural world.<br\/><br\/>We are specialists in the Organic Colour Systems range because they create beautiful hair colours, whilst helping minimise the impact to your hair and the environment. In store and online we stock a range of clean, gentle and highly effective beauty, wellbeing and lifestyle brands that prioritise gentle, nourishing and natural ingredients and avoid any harsh or damaging chemical additives. The combination of our technical skills and the naturally enriching products we use ensure emphasis on the long-term condition of your hair and skin. <\/p>",
+            "link1_label": "Therapy room",
+            "link1": "shopify:\/\/pages\/therapy-room",
+            "link2_label": "Products + Ethos",
+            "link2": "shopify:\/\/pages\/products-ethos"
           }
         },
-        "column2": {
-          "type": "column",
+        "c6adf2d7-3a20-42c0-8d60-f67b4964d9b0": {
+          "type": "info-column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "text": "<p>(+44) 020 8533 4206<br\/>139 MARE STREET, LONDON, E8 3RH<br\/><a href=\"mailto:info@glasshousesalon.co.uk\" title=\"mailto:info@glasshousesalon.co.uk\">info@glasshousesalon.co.uk<\/a><\/p>",
+            "show_opening_hours": true,
+            "button_label_1": "Book now",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "Services",
+            "button_link_2": "shopify:\/\/collections\/all",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "template--17925350031666__63e385b7-5b9d-4f53-93a1-7c57da66924b-16781132120482b109-0",
+        "c6adf2d7-3a20-42c0-8d60-f67b4964d9b0"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "f11a1e73-9dc9-4113-bdce-c8d7067ac1e5": {
@@ -245,7 +235,8 @@
   },
   "order": [
     "4401d9a3-09c7-4460-9372-c30dda20b1fd",
-    "multicolumn",
+    "86baf03b-db9c-4332-b6c9-69883c936624",
+    "63e385b7-5b9d-4f53-93a1-7c57da66924b",
     "f11a1e73-9dc9-4113-bdce-c8d7067ac1e5",
     "4dd67df2-6cf0-4dbc-b6b8-4078f8959c76"
   ]
