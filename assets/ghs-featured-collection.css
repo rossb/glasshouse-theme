@@ -1,0 +1,27 @@
+.ghs-featured-collection .collection__title {
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 3.5rem;
+}
+.ghs-featured-collection .collection__title .title {
+  margin-bottom: 1.5rem;
+}
+.ghs-featured-collection .collection__description {
+  width: calc(60%);
+  margin-bottom: 5rem;
+}
+.ghs-featured-collection {
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+}
+.ghs-featured-collection .collection__title.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 1rem;
+}
+.ghs-featured-collection .collection__title .title:not(:only-child) {
+  margin-bottom: 0;
+}
+.ghs-featured-collection .product-grid {
+  --grid-desktop-horizontal-spacing: 6rem;
+}

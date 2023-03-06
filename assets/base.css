@@ -9,6 +9,7 @@
   --letter-spacing-1: 0.6px;
   --letter-spacing-2: 0.1em;
   --letter-spacing-3: 0.02em;
+  --letter-spacing-4: 0.04em;
   --text-underline-offset: 0.1rem;
   --text-underline-offset-big: 0.3rem;
 
@@ -92,6 +93,7 @@
   --color-off-white: 249, 249, 249;
   --color-base-text: 38, 43, 47;
   --border-color: rgba(var(--color-base-text), 0.4);
+  --border-color-2: rgba(112, 112, 112, 0.4);
   --border-color-light: rgb(245 244 242 / 40%);
   --color-shadow: var(--color-base-text);
   --color-base-background-1: 245, 244, 242; /* #F5F4F2 */
@@ -899,8 +901,9 @@ h6,
 .h1-alt,
 .h2-alt,
 .h3-alt,
-.h4-alt {
-  letter-spacing: 1.2;
+.h4-alt,
+.h5-alt {
+  letter-spacing: var(--letter-spacing-4);
   font-family: var(--font-alt-family);
   font-weight: var(--font-alt-weight-normal);
   line-height: var(--line-height-heading);
@@ -929,6 +932,12 @@ h6,
 .h4-alt {
   font-size: 1.4rem;
   line-height: calc(22 / 18);
+}
+
+.h5-alt {
+  font-size: 1.4rem;
+  line-height: calc(22 / 18);
+  font-weight: normal;
 }
 
 @media screen and (min-width: 750px) {
