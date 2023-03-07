@@ -47,13 +47,7 @@
 }
 
 .article-card .card__heading {
-  margin-bottom: 0.6rem;
-}
-
-.blog-articles .article-card .card__information,
-.blog__posts .article-card .card__information {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  margin-bottom: 1.6rem;
 }
 
 .article-card__info {
@@ -73,9 +67,14 @@
   margin-top: auto;
 }
 
+.article-card__readmore {
+  margin-top: auto;
+}
+
 .article-card__excerpt {
   width: 100%;
   margin-top: 1.2rem;
+  margin-bottom: 2.5rem;
 }
 
 .article-card__link:not(:only-child) {
@@ -139,4 +138,9 @@
       margin-bottom: 7rem;
     }
   }
+}
+
+.article-card .card__information {
+  display: flex;
+  flex-flow: column;
 }

@@ -13,7 +13,7 @@
   --text-underline-offset: 0.1rem;
   --text-underline-offset-big: 0.3rem;
 
-  --page-sidepad: 1.5rem;
+  --page-sidepad: 2.5rem;
 
   --height-header: 8rem;
   --height-header-large-up: 9rem;
@@ -77,6 +77,9 @@
   --line-height-h3: var(--line-height-tighter);
   --font-size-desktop-h3: 2.2rem;
   --font-h3-weight: 700;
+
+  --font-size-h3b: 2rem;
+  --font-size-desktop-h3b: 2.2rem;
 
   --font-size-h4: 2rem;
   --line-height-h4: var(--line-height-tighter);
@@ -679,7 +682,7 @@ body,
 
 .rte-width {
   max-width: 82rem;
-  margin: 0 auto 2rem;
+  /* margin: 0 auto 2rem; */
 }
 
 .hidden {
@@ -869,11 +872,17 @@ h3,
   line-height: var(--line-height-h3);
   font-weight: var(--font-h3-weight);
 }
+.h3--b {
+  font-size: var(--font-size-h3b);
+}
 
 @media only screen and (min-width: 750px) {
   h3,
   .h3 {
     font-size: var(--font-size-desktop-h3);
+  }
+  .h3--b {
+    font-size: var(--font-size-desktop-h3b);
   }
 }
 
@@ -926,7 +935,7 @@ h6,
 }
 
 .h3-alt {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .h4-alt {
@@ -935,7 +944,7 @@ h6,
 }
 
 .h5-alt {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: calc(22 / 18);
   font-weight: normal;
 }
@@ -3612,3 +3621,26 @@ input {
   background-color: var(--color-scrollbar-thumb);
 }
 /* END CUSTOM SCROLLBARS */
+
+.ghs-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2.5rem;
+}
+.ghs-section-title > * {
+  margin: 0;
+}
+
+.ghs-section-spacing {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+@media screen and (min-width: 990px) {
+  .ghs-section-spacing {
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+  }
+}
