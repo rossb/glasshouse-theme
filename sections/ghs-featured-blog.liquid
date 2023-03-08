@@ -27,7 +27,7 @@
         {%- for article in section.settings.blog.articles limit: 3 -%}
           <div
             id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="blog__post grid__item article"
+            class="blog__post grid__item article{% if forloop.first %} article--big{% endif %}"
           >
             {% render 'article-card',
               blog: section.settings.blog,
@@ -116,7 +116,7 @@
     {
       "type": "checkbox",
       "id": "show_date",
-      "default": true,
+      "default": false,
       "label": "t:sections.featured-blog.settings.show_date.label"
     },
     {

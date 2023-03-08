@@ -107,3 +107,18 @@
 .ghs-featured-blog .blog__post.article {
   width: 100%;
 }
+
+@media screen and (min-width: 990px) {
+
+  .ghs-featured-blog .blog__post.article--big .card__heading {
+    margin-bottom: 3.2rem;
+    font-size: 3rem;
+  }
+  .ghs-featured-blog .article-card__excerpt {
+    font-size: 1.4rem;
+  }
+  .ghs-featured-blog .blog__post.article--big .article-card__excerpt {
+    font-size: 1.8rem;
+  }
+
+}
