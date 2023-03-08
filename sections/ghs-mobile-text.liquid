@@ -12,18 +12,20 @@
     {% endif %}
   </div>
 
-  <script>
-    const moreBtn = document.querySelector('.section-{{ section.id }} .readmore__btn');
-    const moreTxt = document.querySelector('.section-{{ section.id }} .readmore__more');
-    moreBtn.addEventListener('click', event => {
-      event.preventDefault();
-      moreBtn.classList.toggle('is-open');
-      moreTxt.hidden = !moreTxt.hidden;
-      moreBtn.querySelectorAll('span').forEach(span => {
-        span.hidden = !span.hidden;
+  {% javascript %}
+    (() => {
+      const moreBtn = document.querySelector('.section-{{ section.id }} .readmore__btn');
+      const moreTxt = document.querySelector('.section-{{ section.id }} .readmore__more');
+      moreBtn.addEventListener('click', event => {
+        event.preventDefault();
+        moreBtn.classList.toggle('is-open');
+        moreTxt.hidden = !moreTxt.hidden;
+        moreBtn.querySelectorAll('span').forEach(span => {
+          span.hidden = !span.hidden;
+        });
       });
-    });
-  </script>
+    })();
+  {% endjavascript %}
 
   <style>
     .readmore {
