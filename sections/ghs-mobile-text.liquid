@@ -11,37 +11,37 @@
       </button>
     {% endif %}
   </div>
-
-  {% javascript %}
-    (() => {
-      const moreBtn = document.querySelector('.section-{{ section.id }} .readmore__btn');
-      const moreTxt = document.querySelector('.section-{{ section.id }} .readmore__more');
-      moreBtn.addEventListener('click', event => {
-        event.preventDefault();
-        moreBtn.classList.toggle('is-open');
-        moreTxt.hidden = !moreTxt.hidden;
-        moreBtn.querySelectorAll('span').forEach(span => {
-          span.hidden = !span.hidden;
-        });
-      });
-    })();
-  {% endjavascript %}
-
-  <style>
-    .readmore {
-      margin: 5rem 0 7rem;
-    }
-    .readmore__btn {
-      margin-top: 2.4rem;
-    }
-    .readmore__btn:after {
-      content: ' +';
-    }
-    .readmore__btn.is-open:after {
-      content: ' -';
-    }
-  </style>
 {% endif %}
+
+{% javascript %}
+  (() => {
+    const moreBtn = document.querySelector('.section-{{ section.id }} .readmore__btn');
+    const moreTxt = document.querySelector('.section-{{ section.id }} .readmore__more');
+    moreBtn.addEventListener('click', event => {
+      event.preventDefault();
+      moreBtn.classList.toggle('is-open');
+      moreTxt.hidden = !moreTxt.hidden;
+      moreBtn.querySelectorAll('span').forEach(span => {
+        span.hidden = !span.hidden;
+      });
+    });
+  })();
+{% endjavascript %}
+
+<style>
+  .readmore {
+    margin: 5rem 0 7rem;
+  }
+  .readmore__btn {
+    margin-top: 2.4rem;
+  }
+  .readmore__btn:after {
+    content: ' +';
+  }
+  .readmore__btn.is-open:after {
+    content: ' -';
+  }
+</style>
 
 {% schema %}
 {

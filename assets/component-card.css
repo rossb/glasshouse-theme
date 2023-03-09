@@ -155,6 +155,7 @@
   align-self: flex-end;
   grid-row-start: 3;
   justify-self: flex-start;
+  display: none;
 }
 
 .card__badge.top {
@@ -353,7 +354,8 @@
 .card-information,
 .card-information > .price {
   color: rgb(var(--color-foreground));
-  font-size: 1.2rem;
+  font-size: var(--font-size-xsmall);
+  line-height: 1;
 }
 
 .card--horizontal .card-information > .price {
@@ -379,8 +381,8 @@
 
 @media screen and (min-width: 750px) {
 
-  .card {
-    padding-bottom: 6.5rem;
+  .card__content {
+    margin-bottom: 5.5rem;
   }
   .article-card {
     padding-bottom: 2.5rem;
@@ -394,9 +396,12 @@
   .article-card .card__content {
     margin-bottom: 0;
   }
+  .card-information {
+    margin-top: 2rem;
+  }
   .card-information,
   .card-information > .price {
-    font-size: 1.6rem;
+    font-size: var(--font-size-desktop-base);
   }
 
 }
