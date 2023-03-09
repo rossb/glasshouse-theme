@@ -958,6 +958,19 @@ h6,
 
 }
 
+.main-page-title {
+  margin: 1.5rem 2.4rem 3.5rem;
+  font-size: var(--font-size-h0);
+  line-height: var(--line-height-h0);
+}
+
+@media screen and (min-width: 750px) {
+  .main-page-title {
+    margin: 6rem;
+    font-size: var(--font-size-desktop-h0);
+  }
+}
+
 blockquote {
   font-style: normal;
   color: rgb(var(--color-foreground));
@@ -1473,6 +1486,10 @@ summary::-webkit-details-marker {
   .grid {
     column-gap: var(--grid-desktop-horizontal-spacing);
     row-gap: var(--grid-desktop-vertical-spacing);
+  }
+  .product-grid {
+    --grid-desktop-vertical-spacing: 6rem;
+    --grid-desktop-horizontal-spacing: 6rem;
   }
 }
 
@@ -2187,10 +2204,10 @@ details[open] > .share-button__fallback {
 }
 
 .select__select {
-  font-family: var(--font-body-family);
+  font-family: var(--font-alt-family);
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
-  font-size: 1.2rem;
+  font-size: var(--font-size-small);
   color: rgb(var(--color-foreground));
 }
 
@@ -2240,6 +2257,7 @@ details[open] > .share-button__fallback {
 .select .icon-caret,
 .customer select + svg {
   height: 0.6rem;
+  width: auto;
   pointer-events: none;
   position: absolute;
   top: calc(50% - 0.2rem);
@@ -3643,4 +3661,22 @@ input {
     margin-top: 12rem;
     margin-bottom: 12rem;
   }
+}
+
+.breadcrumbs {
+  font-size: 1rem;
+  font-family: var(--font-alt-family);
+  text-transform: uppercase;
+  color: rgb(115, 117, 119);
+  display: flex;
+}
+.breadcrumbs a {
+  text-decoration: none;
+  padding: 0 .5ex;
+}
+.breadcrumbs a:first-child {
+  padding-left: 0;
+}
+.breadcrumbs a:last-child {
+  padding-right: 0;
 }
