@@ -1462,7 +1462,7 @@ summary::-webkit-details-marker {
 }
 
 .subtitle {
-  font-size: 1.8rem;
+  font-size: var(--font-size-h6);
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   letter-spacing: 0.06rem;
   color: rgba(var(--color-foreground), 0.7);
@@ -1934,11 +1934,16 @@ button.shopify-payment-button__button--unbranded {
   position: relative;
 }
 
+.shopify-payment-button__button--unbranded:hover:not([disabled]) {
+  background-color: transparent;
+}
+
 @media screen and (min-width: 750px) {
 
   .button,
   .button-label,
   .shopify-challenge__button,
+  button.shopify-payment-button__button--unbranded,
   .customer button {
     font-size: var(--buttons-font-size-desktop);
     letter-spacing: var(--buttons-line-height-desktop);
@@ -3744,7 +3749,7 @@ input {
     margin-bottom: 7rem;
     font-size: var(--font-size-desktop-h0);
   }
-  .page-title__wrapper *:first-child {
+  .page-title__wrapper > *:first-child {
     margin-bottom: 3rem;
   }
   .breadcrumbs {

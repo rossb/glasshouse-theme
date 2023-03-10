@@ -27,6 +27,14 @@
         <span class="product-form__error-message"></span>
       </div>
 
+      {% assign avail_label = 'Unavailable' %}
+      {% if product.available %}
+        {% assign avail_label = 'In Stock' %}
+      {% endif %}
+      <p class="product-form__availability">
+        Availability <span>{{ avail_label }}</span>
+      </p>
+
       {%- form 'product',
         product,
         id: product_form_id,
