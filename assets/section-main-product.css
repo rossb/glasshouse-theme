@@ -407,6 +407,14 @@ a.product__text {
     margin-bottom: .2rem;
   }
 
+  .product .price__container {
+    margin-bottom: 0;
+  }
+
+  .product__info-container > * + * {
+    margin: 1.8rem 0;
+  }
+
   .product__info-container {
     max-width: 60rem;
     padding-top: 2.5rem;
@@ -560,6 +568,10 @@ a.product__text {
 }
 
 @media screen and (min-width: 750px) {
+  .product-form__buttons {
+    max-width: 14rem;
+  }
+
   .product-form__quantity .form__label {
     margin-bottom: 0;
   }
