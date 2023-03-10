@@ -73,7 +73,7 @@
               </p>
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
-                <h1>{{ product.title | escape }}</h1>
+                <h1 class="h1-alt">{{ product.title | escape }}</h1>
                 <a href="{{ product.url }}" class="product__title">
                   <h2 class="h1">
                     {{ product.title | escape }}
@@ -155,6 +155,7 @@
               </p>
             {%- when 'description' -%}
               {%- if product.description != blank -%}
+                <h2 class="h4 accordion__title">Description</h2>
                 <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                   {{ product.description }}
                 </div>
@@ -197,7 +198,7 @@
                 {% # theme-check-disable %}
                 {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
                 {% # theme-check-enable %}
-                <label class="form__label" for="Quantity-{{ section.id }}">
+                <label class="form__label form__label--pdp" for="Quantity-{{ section.id }}">
                   {{ 'products.product.quantity.label' | t }}
                   <span class="quantity__rules-cart{% if cart_qty == 0 %} hidden{% endif %}">
                     <span class="loading-overlay hidden">
