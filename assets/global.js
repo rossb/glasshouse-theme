@@ -806,9 +806,11 @@ class VariantSelects extends HTMLElement {
     this.updateVariantStatuses();
 
     if (!this.currentVariant) {
+      this.setAvailability(false);
       this.toggleAddButton(true, '', true);
       this.setUnavailable();
     } else {
+      this.setAvailability(true);
       this.updateMedia();
       this.updateURL();
       this.updateVariantInput();
@@ -935,6 +937,7 @@ class VariantSelects extends HTMLElement {
         if (inventoryDestination) inventoryDestination.classList.toggle('visibility-hidden', inventorySource.innerText === '');
 
         this.toggleAddButton(!this.currentVariant.available, window.variantStrings.soldOut);
+        this.setAvailability(this.currentVariant.available);
       });
   }
 
@@ -944,13 +947,16 @@ class VariantSelects extends HTMLElement {
     const addButton = productForm.querySelector('[name="add"]');
     const addButtonText = productForm.querySelector('[name="add"] > span');
     if (!addButton) return;
+    const availability = document.getElementById(`Availability-${this.dataset.section}`);
 
     if (disable) {
       addButton.setAttribute('disabled', 'disabled');
       if (text) addButtonText.textContent = text;
+      // if (availability) availability.textContent = window.variantStrings.unavailable;
     } else {
       addButton.removeAttribute('disabled');
       addButtonText.textContent = window.variantStrings.addToCart;
+      // if (availability) availability.textContent = window.variantStrings.available;
     }
 
     if (!modifyClass) return;
@@ -963,12 +969,20 @@ class VariantSelects extends HTMLElement {
     const price = document.getElementById(`price-${this.dataset.section}`);
     const inventory = document.getElementById(`Inventory-${this.dataset.section}`);
     const sku = document.getElementById(`Sku-${this.dataset.section}`);
+    const availability = document.getElementById(`Availability-${this.dataset.section}`);
 
+    if (availability) availability.textContent = window.variantStrings.unavailable;
     if (!addButton) return;
     addButtonText.textContent = window.variantStrings.unavailable;
     if (price) price.classList.add('visibility-hidden');
     if (inventory) inventory.classList.add('visibility-hidden');
     if (sku) sku.classList.add('visibility-hidden');
+  }
+
+  setAvailability(direction) {
+    const availability = document.getElementById(`Availability-${this.dataset.section}`);
+    if (!availability) return;
+    availability.textContent = direction ? window.variantStrings.available : window.variantStrings.unavailable;
   }
 
   getVariantData() {

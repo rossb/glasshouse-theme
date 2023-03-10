@@ -27,12 +27,12 @@
         <span class="product-form__error-message"></span>
       </div>
 
-      {% assign avail_label = 'Unavailable' %}
-      {% if product.available %}
-        {% assign avail_label = 'In Stock' %}
+      {% assign avail_label = 'products.product.unavailable' | t %}
+      {% if product.selected_or_first_available_variant.available %}
+        {% assign avail_label = 'products.product.available' | t %}
       {% endif %}
       <p class="product-form__availability">
-        Availability <span>{{ avail_label }}</span>
+        Availability <span id="Availability-{{ section.id }}">{{ avail_label }}</span>
       </p>
 
       {%- form 'product',
