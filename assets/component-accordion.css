@@ -12,6 +12,26 @@
 
 .accordion .summary__title + .icon-caret {
   height: calc(var(--font-heading-scale) * 0.6rem);
+  display: block;
+}
+
+.accordion summary .icon-plus,
+.accordion summary .icon-minus {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  right: 1.5rem;
+  top: calc(50% - 0.5rem);
+}
+
+.accordion summary .icon-minus {
+  display: none;
+}
+.accordion details[open] summary .icon-plus {
+  display: none;
+}
+.accordion details[open] summary .icon-minus {
+  display: block;
 }
 
 .accordion {
@@ -72,7 +92,7 @@
 @media screen and (min-width: 750px) {
 
   .accordion summary {
-    padding: 2rem 0;
+    padding: 2.2rem 0;
   }
   .accordion__title {
   }

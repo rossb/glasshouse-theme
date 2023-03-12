@@ -1,5 +1,6 @@
 .product {
   margin: 0;
+  margin-bottom: 11.5rem;
 }
 
 .product.grid {
@@ -19,6 +20,7 @@
   .product {
     padding-top: 2rem;
     border-top: 1px solid var(--border-color);
+    margin-bottom: 19rem;
   }
   .product__column-sticky {
     display: block;
@@ -179,7 +181,7 @@
   font-size: 1.6rem;
   font-weight: var(--font-alt-weight-normal);
   letter-spacing: var(--letter-spacing-4);
-  margin: 6rem 0 3rem;
+  margin: 6rem 0 2.4rem;
 }
 
 variant-radios,
@@ -376,7 +378,7 @@ a.product__text {
 }
 
 .product__accordion .accordion__content {
-  padding: 0 1rem;
+  padding: 0;
 }
 
 .product .price .badge {
@@ -662,6 +664,10 @@ a.product__text {
 
 .product__modal-opener:hover .product__media-icon {
   /* border: 0.1rem solid rgba(var(--color-foreground), 0.1); */
+}
+
+.product__modal-opener .product__media-icon {
+  opacity: 0;
 }
 
 @media screen and (min-width: 750px) {

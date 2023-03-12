@@ -1951,6 +1951,9 @@
         "description": {
           "name": "Description"
         },
+        "description-accordion": {
+          "name": "Description (H3 Headings Accordion)"
+        },
         "sku": {
           "name": "SKU",
           "settings": {
