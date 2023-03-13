@@ -17,6 +17,8 @@
   text-align: left;
   padding-bottom: 18.5rem;
   min-height: 45rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .shopify-section-header-sticky .mega-menu__content {
@@ -47,8 +49,7 @@
 }
 
 .mega-menu__list > li > ul {
-  max-height: 22.8em;
-  overflow: auto;
+  height: 22.8em;
 }
 
 .mega-menu__list > li > ul::before {

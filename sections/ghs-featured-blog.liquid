@@ -47,7 +47,7 @@
               blog: section.settings.blog,
               article: article,
               media_aspect_ratio: 1.66,
-              show_image: section.settings.show_image,
+              show_image: true,
               show_date: section.settings.show_date,
               show_author: section.settings.show_author,
               show_excerpt: true
@@ -85,12 +85,6 @@
   "settings": [
     {
       "type": "text",
-      "id": "view_all_label",
-      "label": "View all label",
-      "default": "Read all articles"
-    },
-    {
-      "type": "text",
       "id": "heading",
       "default": "Blog posts",
       "label": "t:sections.featured-blog.settings.heading.label"
@@ -99,22 +93,6 @@
       "type": "blog",
       "id": "blog",
       "label": "t:sections.featured-blog.settings.blog.label"
-    },
-    {
-      "type": "range",
-      "id": "columns_desktop",
-      "min": 1,
-      "max": 4,
-      "step": 1,
-      "default": 3,
-      "label": "t:sections.featured-blog.settings.columns_desktop.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_image",
-      "default": true,
-      "label": "t:sections.featured-blog.settings.show_image.label",
-      "info": "t:sections.featured-blog.settings.show_image.info"
     },
     {
       "type": "checkbox",
@@ -133,6 +111,12 @@
       "id": "show_view_all",
       "default": true,
       "label": "t:sections.featured-blog.settings.show_view_all.label"
+    },
+    {
+      "type": "text",
+      "id": "view_all_label",
+      "label": "View all label",
+      "default": "View all articles"
     }
   ],
   "presets": [

@@ -22,6 +22,9 @@
     if media_aspect_ratio != null
       assign ratio = media_aspect_ratio
     endif
+    assign excerpt_truncat_after_chars = 350
+    assign title_truncate_after_chars = 250
+    assign excerpt_truncate_words = 50
   -%}
   <div class="article-card-wrapper card-wrapper">
     {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
@@ -77,7 +80,7 @@
           <div class="card__information">
             <h3 class="card__heading{% if show_excerpt %} h3--b{% endif %}">
               <a href="{{ article.url }}" class="full-unstyled-link">
-                {{ article.title | truncate: 50 | escape }}
+                {{ article.title | truncate: title_truncate_after_chars | escape }}
               </a>
             </h3>
             <div class="article-card__info caption-with-letter-spacing h5">
@@ -91,10 +94,12 @@
             {%- if show_excerpt -%}
               {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
                 <p class="article-card__excerpt rte-width">
-                  {%- if article.excerpt.size > 0 -%}
-                    {{ article.excerpt | strip_html | truncatewords: 30 }}
+                  {%- if article.excerpt.size > excerpt_truncat_after_chars -%}
+                    {{ article.excerpt | strip_html | truncatewords: 50 }}
+                  {%- elsif article.excerpt.size > 0 -%}
+                    {{ article.excerpt | strip_html }}
                   {%- else -%}
-                    {{ article.content | strip_html | truncatewords: 30 }}
+                    {{ article.content | strip_html | truncatewords: 50 }}
                   {%- endif -%}
                 </p>
               {%- endif -%}
@@ -116,7 +121,7 @@
         <div class="card__information">
           <h3 class="card__heading{% if show_excerpt %} h3--b{% endif %}">
             <a href="{{ article.url }}" class="full-unstyled-link">
-              {{ article.title | truncate: 50 | escape }}
+              {{ article.title | truncate: title_truncate_after_chars | escape }}
             </a>
           </h3>
           <div class="article-card__info caption-with-letter-spacing h5">
@@ -130,10 +135,12 @@
           {%- if show_excerpt -%}
             {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
               <p class="article-card__excerpt rte-width">
-                {%- if article.excerpt.size > 0 -%}
-                  {{ article.excerpt | strip_html | truncatewords: 30 }}
+                {%- if article.excerpt.size > excerpt_truncat_after_chars -%}
+                  {{ article.excerpt | strip_html | truncatewords: excerpt_truncate_words }}
+                {%- elsif article.excerpt.size > 0 -%}
+                  {{ article.excerpt | strip_html }}
                 {%- else -%}
-                  {{ article.content | strip_html | truncatewords: 30 }}
+                  {{ article.content | strip_html | truncatewords: excerpt_truncate_words }}
                 {%- endif -%}
               </p>
             {%- endif -%}

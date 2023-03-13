@@ -654,7 +654,7 @@
           "label": "Number of columns on desktop"
         },
         "show_view_all": {
-          "label": "Enable \"View all\" button if blog includes more blog posts than shown"
+          "label": "Enable \"View all\" button"
         },
         "show_image": {
           "label": "Show featured image",

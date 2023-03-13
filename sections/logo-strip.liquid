@@ -1,7 +1,8 @@
 {%- style -%}
   .logostrip {
     background: rgb(var(--color-base-background-4));
-    padding: 3.5rem 2.5rem 4.4rem;
+    padding-top: 3.5rem;
+    padding-bottom: 4.4rem;
   }
   .logostrip__title {
     text-align: center;
@@ -23,7 +24,7 @@
   }
 {%- endstyle -%}
 
-<div class="logostrip section-{{ section.id }}-padding small-hide medium-hide">
+<div class="logostrip section-{{ section.id }}-padding small-hide medium-hide page-width page-width--no-width">
   {% if section.settings.title != blank %}
     <p class="logostrip__title {{ section.settings.title_style }}">{{ section.settings.title }}</p>
   {% endif %}

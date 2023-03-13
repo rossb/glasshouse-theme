@@ -1,5 +1,6 @@
 .footer {
-  padding: 4rem 2.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   font-size: var(--font-size-small);
   line-height: var(--line-height-zero);
 }

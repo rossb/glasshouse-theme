@@ -622,15 +622,22 @@ html.no-js .no-js-hidden {
 }
 
 @media screen and (min-width: 990px) {
+  .page-width-desktop,
+  .page-width {
+    padding: 0 calc(2 * var(--page-sidepad));
+    max-width: calc(var(--page-width) + (var(--page-sidepad) * 4));
+  }
   .page-width--narrow {
     max-width: 110rem;
     padding: 0;
   }
 
   .page-width-desktop {
-    max-width: calc(var(--page-width) + (var(--page-sidepad) * 2));
-    padding: 0 var(--page-sidepad);
   }
+}
+
+.page-width--no-width {
+  max-width: none;
 }
 
 .isolate {
@@ -3686,9 +3693,9 @@ input {
 
 /* BEGIN CUSTOM SCROLLBARS */
 :root {
-  --color-scrollbar-track: rgb(var(--color-background));
-  --color-scrollbar-thumb: rgb(var(--color-foreground));
-  --scrollbar-width: .1rem;
+  --color-scrollbar-track: rgb(var(--color-base-background-2));
+  --color-scrollbar-thumb: var(--border-color);
+  --scrollbar-width: .2rem;
 }
 .scrollbar-hide {
   scrollbar-color: transparent;
@@ -3704,9 +3711,14 @@ input {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
+.scrollbar--always {
+  overflow: auto;
+  overflow-y: scroll;
+}
 .scrollbar::-webkit-scrollbar {
   width: var(--scrollbar-width);
   height: var(--scrollbar-width);
+  margin-right: .5rem;
 }
 .scrollbar::-webkit-scrollbar-track {
   background-color: var(--color-scrollbar-track);

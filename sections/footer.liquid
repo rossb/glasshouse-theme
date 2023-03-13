@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}</noscript>
 
-<footer class="footer color-inverse">
+<footer class="footer page-width page-width--no-width color-inverse">
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social or section.settings.enable_follow_on_shop -%}
     <div class="footer__content-top">
       {%- if section.blocks.size > 0 -%}
