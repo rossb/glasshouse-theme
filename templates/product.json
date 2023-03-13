@@ -23,7 +23,7 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "picker_type": "dropdown"
           }
         },
         "quantity_selector": {
@@ -37,45 +37,9 @@
             "show_dynamic_checkout": true
           }
         },
-        "description": {
-          "type": "description",
+        "c618ac85-2863-4bf0-925e-5fb05f03890f": {
+          "type": "description-accordion",
           "settings": {
-          }
-        },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Materials",
-            "icon": "none",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "none",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "none",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "none",
-            "content": "",
-            "page": ""
           }
         }
       },
@@ -86,11 +50,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3"
+        "c618ac85-2863-4bf0-925e-5fb05f03890f"
       ],
       "settings": {
         "enable_sticky_info": true,
