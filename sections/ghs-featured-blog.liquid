@@ -43,9 +43,16 @@
             id="Slide-{{ section.id }}-{{ forloop.index }}"
             class="blog__post grid__item article{% if forloop.first %} article--big{% endif %}"
           >
+            {% liquid
+              assign setting_name = 'article_' | append: forloop.index
+              assign this_article = section.settings[setting_name]
+              if this_article == blank
+                assign this_article = article
+              endif
+            %}
             {% render 'article-card',
               blog: section.settings.blog,
-              article: article,
+              article: this_article,
               media_aspect_ratio: 1.66,
               show_image: true,
               show_date: section.settings.show_date,
@@ -117,6 +124,27 @@
       "id": "view_all_label",
       "label": "View all label",
       "default": "View all articles"
+    },
+    {
+      "type": "header",
+      "content": "Sticky articles",
+      "info": "Manually select 3 articles to feature. Leave blank to show the latest articles from the above blog"
+    },
+    {
+      "type": "article",
+      "id": "article_1",
+      "label": "Article 1",
+      "info": "Displayed large on desktop"
+    },
+    {
+      "type": "article",
+      "id": "article_2",
+      "label": "Article 2"
+    },
+    {
+      "type": "article",
+      "id": "article_3",
+      "label": "Article 3"
     }
   ],
   "presets": [

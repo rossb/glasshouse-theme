@@ -153,16 +153,15 @@
 .product-form__error-message-wrapper:not([hidden]) {
   display: flex;
   align-items: flex-start;
-  font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
 
 .product-form__error-message-wrapper svg {
   flex-shrink: 0;
-  width: 1.2rem;
-  height: 1.2rem;
-  margin-right: 0.7rem;
-  margin-top: 0.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-right: 1rem;
+  margin-top: 0.1rem;
 }
 
 /* Form Elements */

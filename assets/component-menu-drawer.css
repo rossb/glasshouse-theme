@@ -227,6 +227,10 @@ details[open].menu-opening > .menu-drawer__submenu {
   padding: 2.5rem;
 }
 
+.menu-drawer__utility-links .list-social {
+  display: none;
+}
+
 .menu-drawer__account {
   display: inline-flex;
   align-items: center;

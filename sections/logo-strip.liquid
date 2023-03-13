@@ -1,8 +1,9 @@
 {%- style -%}
   .logostrip {
+    padding: 3.5rem 0;
+  }
+  .logostrip.color-background-off-white {
     background: rgb(var(--color-base-background-4));
-    padding-top: 3.5rem;
-    padding-bottom: 4.4rem;
   }
   .logostrip__title {
     text-align: center;
@@ -10,13 +11,23 @@
   }
   .logostrip__inner {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     align-items: center;
     gap: 1.8rem;
+    max-width: 110rem;
+    margin: 0 auto;
+    padding-bottom: 1rem;
   }
   .logostrip__inner > * {
     max-width: calc((100% - (1.8rem * 7)) / 8);
+    flex-shrink: 0;
+  }
+  .logostrip__inner > *:first-child {
+    margin-left: auto;
+  }
+  .logostrip__inner > *:last-child {
+    margin-right: auto;
   }
   .logostrip__inner img {
     width: 100%;
@@ -24,11 +35,11 @@
   }
 {%- endstyle -%}
 
-<div class="logostrip section-{{ section.id }}-padding small-hide medium-hide page-width page-width--no-width">
+<div class="logostrip color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding small-hide medium-hide page-width page-width--no-width">
   {% if section.settings.title != blank %}
     <p class="logostrip__title {{ section.settings.title_style }}">{{ section.settings.title }}</p>
   {% endif %}
-  <div class="logostrip__inner">
+  <div class="logostrip__inner scrollbar">
     {%- for block in section.blocks -%}
       <div
         class=""
@@ -81,6 +92,38 @@
       ],
       "default": "h3-alt",
       "label": "Heading style"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "background-off-white",
+          "label": "Background off-white"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
     }
   ],
   "blocks": [

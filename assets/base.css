@@ -402,6 +402,10 @@
   --color-card-hover: var(--color-base-solid-button-labels);
 }
 
+.color-background-white {
+  background-color: white;
+}
+
 :root,
 .color-icon-text {
   --color-icon: rgb(var(--color-base-text));
@@ -2283,6 +2287,15 @@ details[open] > .share-button__fallback {
   outline-offset: 0;
 }
 
+.color-inverse .field__input:focus,
+.color-inverse .select__select:focus,
+.color-inverse .customer .field input:focus,
+.color-inverse .customer select:focus,
+.color-inverse .localization-form__select:focus.localization-form__select:after {
+  background: rgba(0,0,0,0.1);
+  outline-color: rgba(0,0,0,0.1);
+}
+
 .localization-form__select:focus {
   outline: 0;
   box-shadow: none;
@@ -2375,6 +2388,16 @@ details[open] > .share-button__fallback {
   top: 0;
   left: 0;
   line-height: var(--line-height-zero);
+  display: none;
+}
+
+.field__input--float:focus ~ .field__label,
+.field__input--float:not(:placeholder-shown) ~ .field__label,
+.field__input--float:-webkit-autofill ~ .field__label,
+.customer .field--float input:focus ~ label,
+.customer .field--float input:not(:placeholder-shown) ~ label,
+.customer .field--float input:-webkit-autofill ~ label {
+  display: block;
 }
 
 .field__input:focus,
@@ -3110,7 +3133,6 @@ menu-drawer + .header__search {
 }
 
 .header__search {
-  display: none;
   line-height: 0;
 }
 

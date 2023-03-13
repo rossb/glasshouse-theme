@@ -115,7 +115,7 @@
   "products": {
     "product": {
       "add_to_cart": "Add to bag",
-      "choose_options": "Choose options",
+      "choose_options": "Select options",
       "choose_product_options": "Choose options for {{ product_name }}",
       "description": "Description",
       "inventory_in_stock": "In stock",

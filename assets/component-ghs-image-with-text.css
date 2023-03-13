@@ -38,6 +38,8 @@
   .ghs-image-with-text .image-with-text__text + .banner__buttons {
     margin-left: auto;
     flex-flow: column;
+    margin-top: auto;
+    padding-bottom: 0.5rem;
   }
 
 }
@@ -93,6 +95,7 @@
   }
   .ghs-multicolumn__column .hero-text {
     margin-bottom: 5.5rem;
+    margin-top: -0.3ex;
   }
   .ghs-multicolumn__links a:after {
     content: ' >';

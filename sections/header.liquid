@@ -132,7 +132,7 @@
               {%- endif -%}
                   <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
                     <div class="field">
-                      <input class="search__input field__input"
+                      <input class="search__input field__input field__input--float"
                         id="Search-In-Modal-1"
                         type="search"
                         name="q"
@@ -363,7 +363,7 @@
               {%- endif -%}
                   <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
                     <div class="field">
-                      <input class="search__input field__input"
+                      <input class="search__input field__input field__input--float"
                         id="Search-In-Modal"
                         type="search"
                         name="q"
@@ -531,6 +531,28 @@
                     </ul>
                   </nav>
                   <div class="menu-drawer__utility-links">
+                    <button class="ctrl-unstyled" data-click-trigger=".header__search .header__icon--search.modal__toggle">
+                      <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
+                        <use href="#icon-search">
+                      </svg>
+                    </button>
+                    <style>
+                      .header__search .header__icon--search.modal__toggle {
+                        opacity: 0;
+                      }
+                    </style>
+                    <script>
+                      (() => {
+                        const btn = document.querySelector('[data-click-trigger]');
+                        const target = document.querySelector(btn.getAttribute('data-click-trigger'));
+                        btn.addEventListener('click', event => {
+                          event.preventDefault();
+                          event.stopPropagation();
+                          target?.click();
+                        });
+                      })();
+                    </script>
+
                     <ul class="list list-social list-unstyled" role="list">
                       {%- if settings.social_twitter_link != blank -%}
                         <li class="list-social__item">
