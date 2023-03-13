@@ -205,8 +205,9 @@
   --buttons-shadow-vertical-offset: 0px;
   --buttons-shadow-blur-radius: 0px;
   --buttons-border-offset: 0px;
-  --buttons-height-mobile: 3.6rem;
-  --buttons-height-desktop: 3.6rem;
+  --buttons-height-mobile: 3.4rem;
+  --buttons-height-desktop: 3.4rem;
+  --buttons-height-small-mobile: 2.4rem;
   --buttons-font-size-mobile: 1rem;
   --buttons-line-height-mobile: 1px;
   --buttons-font-size-desktop: 1.4rem;
@@ -1791,6 +1792,10 @@ button.shopify-payment-button__button--unbranded {
   min-width: var(--buttons-min-width-mobile);
 }
 
+.button--small {
+  min-height: var(--buttons-height-small-mobile);
+}
+
 .shopify-payment-button__button--branded {
   z-index: auto;
 }
@@ -1855,11 +1860,18 @@ button.shopify-payment-button__button--unbranded {
   transition: box-shadow var(--duration-short) ease;
 }
 
+.button:not([disabled]):hover,
+.shopify-challenge__button:hover,
+.customer button:hover,
+.shopify-payment-button__button--unbranded:hover {
+  /* font-weight: 700; */
+}
+
 .button:not([disabled]):hover::after,
 .shopify-challenge__button:hover::after,
 .customer button:hover::after,
 .shopify-payment-button__button--unbranded:hover::after {
-  /* --border-offset: 1.3px; */
+  --border-offset: 1px;
   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)),
     0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
 }
@@ -2258,6 +2270,10 @@ details[open] > .share-button__fallback {
 .localization-form__select:focus.localization-form__select:after {
   outline: 0;
   border-radius: var(--inputs-radius);
+  box-shadow: none;
+  background: rgba(255,255,255,0.3);
+  outline: 3px solid rgba(255,255,255,0.3);
+  outline-offset: 0;
 }
 
 .localization-form__select:focus {
@@ -3296,7 +3312,7 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item {
-  padding: 1.5rem 3.5rem;
+  padding: 1.5rem min(3.5rem, 1.7vw);
   text-transform: uppercase;
   text-decoration: none;
   color: black;

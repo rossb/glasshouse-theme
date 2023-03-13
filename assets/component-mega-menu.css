@@ -82,14 +82,13 @@
   display: block;
   font-size: 1.4rem;
   line-height: calc(1 + 0.3 / var(--font-body-scale));
-  padding-bottom: 0.1rem;
-  padding-top: 0.1rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
   text-decoration: none;
   transition: text-decoration var(--duration-short) ease;
   word-wrap: break-word;
   font-family: var(--font-alt-family);
   font-weight: var(--font-alt-weight-light);
-  text-decoration: underline;
 }
 
 .header--top-center .mega-menu__list {

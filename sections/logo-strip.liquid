@@ -25,7 +25,7 @@
 
 <div class="logostrip section-{{ section.id }}-padding small-hide medium-hide">
   {% if section.settings.title != blank %}
-    <p class="logostrip__title link-simple">{{ section.settings.title }}</p>
+    <p class="logostrip__title {{ section.settings.title_style }}">{{ section.settings.title }}</p>
   {% endif %}
   <div class="logostrip__inner">
     {%- for block in section.blocks -%}
@@ -60,6 +60,26 @@
       "id": "title",
       "label": "Heading",
       "default": "Featured In"
+    },
+    {
+      "type": "select",
+      "id": "title_style",
+      "options": [
+        {
+          "value": "",
+          "label": "Default text"
+        },
+        {
+          "value": "h4",
+          "label": "Default heading"
+        },
+        {
+          "value": "h3-alt",
+          "label": "Alt heading"
+        }
+      ],
+      "default": "h3-alt",
+      "label": "Heading style"
     }
   ],
   "blocks": [

@@ -3,7 +3,7 @@
 }
 
 @media screen and (min-width: 750px) {
-  .main-page-title {
+  .main-page-title--big-margin {
     margin-bottom: 21.5rem;
   }
 }

@@ -14,10 +14,24 @@
     {%- unless section.settings.heading == blank -%}
       <div class="ghs-section-title">
         <h2 id="SectionHeading-{{ section.id }}" class="title h3">
-          {{ section.settings.heading | escape }}
+          {%- if section.settings.title != blank -%}
+            {{ section.settings.heading | escape }}
+          {%- else -%}
+            {{ section.settings.blog.title }}
+          {%- endif -%}
         </h2>
+        {%- if section.settings.show_view_all -%}
+          <a
+            href="{{ section.settings.blog.url }}"
+            class="link-simple"
+            aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
+          >
+            {{ section.settings.view_all_label }}
+          </a>
+        {%- endif -%}
       </div>
     {%- endunless -%}
+
     {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
       <div
         id="Slider-{{ section.id }}"
@@ -42,17 +56,6 @@
           {% if forloop.first %}<div class="other-posts">{% endif %}
           {% if forloop.last %}</div>{% endif %}
         {%- endfor -%}
-      </div>
-
-      <div class="blog__view-all center">
-        <a
-          href="{{ section.settings.blog.url }}"
-          id="ViewAll-{{ section.id }}"
-          class="blog__button link-simple"
-          aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
-        >
-          {{ section.settings.view_all_label }}
-        </a>
       </div>
     {%- else -%}
       <div class="blog-placeholder">
@@ -84,7 +87,7 @@
       "type": "text",
       "id": "view_all_label",
       "label": "View all label",
-      "default": "Read more on our Journal"
+      "default": "Read all articles"
     },
     {
       "type": "text",

@@ -44,11 +44,17 @@
 
 @media screen and (min-width: 750px) {
 
+  .ghs-image-with-text .image-with-text__content,
+  .ghs-image-with-text .image-with-text__heading {
+    font-size: max(2.4rem, min(var(--font-size-desktop-h2), 1.6vw));
+  }
+
   .ghs-image-with-text {
     max-height: calc(100vh - var(--height-header-large-up));
     display: flex;
     align-items: center;
     flex-flow: column;
+    margin-bottom: 12rem;
   }
   .ghs-image-with-text .image-with-text__heading {
     order: -1;
@@ -66,7 +72,7 @@
     color: rgb(var(--color-light-text));
   }
   .ghs-image-with-text .image-with-text__content {
-    max-width: 59rem;
+    max-width: 19.7em;
     padding: 13.5rem 2.5rem;
     height: auto;
   }

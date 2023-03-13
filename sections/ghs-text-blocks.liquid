@@ -2,58 +2,92 @@
 {{ 'ghs-section-multicolumn.css' | asset_url | stylesheet_tag }}
 {{ 'component-rte.css' | asset_url | stylesheet_tag }}
 
-<div class="ghs-multicolumn multicolumn page-width small-hide medium-hide section-{{ section.id }}">
-  {% for block in section.blocks %}
-    {% case block.type %}
-      {% when 'column' %}
-        <div class="ghs-multicolumn__column">
-          <h2 class="hero-text">{{ block.settings.title }}</h2>
-          <div class="rte">
-            {{ block.settings.text }}
+<div class="page-width">
+  <div class="ghs-section-title">
+      <h2 class="title h3">
+        {%- if section.settings.title != blank -%}
+          {{ section.settings.title | escape }}
+        {%- else -%}
+          {{ section.settings.collection.title }}
+        {%- endif -%}
+      </h2>
+
+    {%- if section.settings.show_view_all and more_in_collection -%}
+      {% liquid
+        if section.settings.view_all_label
+          assign view_all_label = section.settings.view_all_label
+        else
+          assign view_all_label = 'sections.featured_collection.view_all' | t
+        endif
+      %}
+      <a
+        href="{{ section.settings.collection.url }}"
+        class="link-simple"
+        aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
+      >
+        {{ view_all_label }}
+      </a>
+    {%- endif -%}
+  </div>
+
+  <div class="ghs-multicolumn multicolumn small-hide medium-hide section-{{ section.id }}">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'column' %}
+          <div class="ghs-multicolumn__column">
+            <h2 class="hero-text">{{ block.settings.title }}</h2>
+            <div class="rte">
+              {{ block.settings.text }}
+            </div>
+            <div class="ghs-multicolumn__links">
+              <a href="{{ block.settings.link1 }}">{{ block.settings.link1_label }}</a>
+              <a href="{{ block.settings.link2 }}">{{ block.settings.link2_label }}</a>
+            </div>
           </div>
-          <div class="ghs-multicolumn__links">
-            <a href="{{ block.settings.link1 }}">{{ block.settings.link1_label }}</a>
-            <a href="{{ block.settings.link2 }}">{{ block.settings.link2_label }}</a>
+        {% when 'info-column' %}
+          <div class="ghs-multicolumn__info-column">
+            <div class="ghs-multicolumn__address rte">
+              {{ block.settings.text }}
+            </div>
+            {% if block.settings.show_opening_hours %}
+              <h3 class="ghs-multicolumn__info-heading h5">{{ block.settings.hours_title }}</h3>
+              {% render 'ghs-opening-hours', class_str: 'list-hours--small' %}
+            {% endif %}
+            <div class="ghs-multicolumn__buttons">
+              <a class="button" href="{{ block.settings.button_link_1 }}">{{ block.settings.button_label_1 }}</a>
+              <a class="button" href="{{ block.settings.button_link_2 }}">{{ block.settings.button_label_2 }}</a>
+            </div>
           </div>
-        </div>
-      {% when 'info-column' %}
-        <div class="ghs-multicolumn__info-column">
-          <div class="ghs-multicolumn__address rte">
-            {{ block.settings.text }}
+        {% when 'small-text-column' %}
+          <div class="ghs-multicolumn__info-column">
+            {% if block.settings.title %}
+              <h3 class="ghs-multicolumn__info-heading {{ block.settings.heading_size }}">{{ block.settings.title }}</h3>
+            {% endif %}
+            <div class="ghs-multicolumn__address rte">
+              {{ block.settings.text }}
+            </div>
+            <div class="ghs-multicolumn__buttons">
+              <a class="button" href="{{ block.settings.button_link_1 }}">{{ block.settings.button_label_1 }}</a>
+              <a class="button" href="{{ block.settings.button_link_2 }}">{{ block.settings.button_label_2 }}</a>
+            </div>
           </div>
-          {% if block.settings.show_opening_hours %}
-            <h3 class="ghs-multicolumn__info-heading h5">{{ block.settings.hours_title }}</h3>
-            {% render 'ghs-opening-hours', class_str: 'list-hours--small' %}
-          {% endif %}
-          <div class="ghs-multicolumn__buttons">
-            <a class="button" href="{{ block.settings.button_link_1 }}">{{ block.settings.button_label_1 }}</a>
-            <a class="button" href="{{ block.settings.button_link_2 }}">{{ block.settings.button_label_2 }}</a>
-          </div>
-        </div>
-      {% when 'small-text-column' %}
-        <div class="ghs-multicolumn__info-column">
-          {% if block.settings.title %}
-            <h3 class="ghs-multicolumn__info-heading {{ block.settings.heading_size }}">{{ block.settings.title }}</h3>
-          {% endif %}
-          <div class="ghs-multicolumn__address rte">
-            {{ block.settings.text }}
-          </div>
-          <div class="ghs-multicolumn__buttons">
-            <a class="button" href="{{ block.settings.button_link_1 }}">{{ block.settings.button_label_1 }}</a>
-            <a class="button" href="{{ block.settings.button_link_2 }}">{{ block.settings.button_label_2 }}</a>
-          </div>
-        </div>
-    {% endcase %}
-  {% endfor %}
+      {% endcase %}
+    {% endfor %}
+  </div>
 </div>
 
 {% schema %}
 {
-  "name": "GHS: Multi-column",
+  "name": "GHS: Text blocks",
   "class": "section",
   "tag": "section",
   "max_blocks": 2,
   "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.featured-collection.settings.title.label"
+    }
   ],
   "blocks": [
     {
@@ -228,7 +262,7 @@
   ],
   "presets": [
     {
-      "name": "GHS: Multi-column",
+      "name": "GHS: Text blocks",
       "blocks": [
         {
           "type": "column"
