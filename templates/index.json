@@ -172,6 +172,7 @@
         "columns_desktop": 4,
         "full_width": false,
         "show_view_all": true,
+        "view_all_label": "Shop all products",
         "enable_desktop_slider": false,
         "color_scheme": "background-1",
         "image_ratio": "adapt",
@@ -187,11 +188,10 @@
       "settings": {
         "heading": "Journal",
         "blog": "journal",
-        "columns_desktop": 3,
-        "show_image": true,
         "show_date": false,
         "show_author": false,
-        "show_view_all": true
+        "show_view_all": true,
+        "view_all_label": "View all articles"
       }
     },
     "4dd67df2-6cf0-4dbc-b6b8-4078f8959c76": {
@@ -265,7 +265,8 @@
         "e59ecef8-2667-40f0-8d65-e975c6cbfa96"
       ],
       "settings": {
-        "title": "Featured In"
+        "title": "Featured In",
+        "title_style": "h3-alt"
       }
     }
   },
