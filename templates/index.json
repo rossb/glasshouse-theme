@@ -191,7 +191,13 @@
         "show_date": false,
         "show_author": false,
         "show_view_all": true,
-        "view_all_label": "View all articles"
+        "view_all_label": "View all articles",
+        "article_image_pos_1": "center",
+        "article_image_pos_2": "v-bottom",
+        "article_image_pos_3": "v-top",
+        "article_1": "",
+        "article_2": "",
+        "article_3": ""
       }
     },
     "4dd67df2-6cf0-4dbc-b6b8-4078f8959c76": {
@@ -252,6 +258,34 @@
             "image": "shopify:\/\/shop_images\/Vanity_Fair_logo_440x_dcdd4818-fa8a-4d93-a3ef-96496213ee46.svg",
             "title": "Vanity Fair"
           }
+        },
+        "e441fbe8-6898-4962-a58e-2071c274c096": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PRESS_Monocle_440x..svg",
+            "title": ""
+          }
+        },
+        "895ee58a-82f6-4742-a8b9-6e1cbbdb6043": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PR_Vouge_440x_9a739cad-4b04-4c6d-9ba1-1f07fa55cfdb.svg",
+            "title": ""
+          }
+        },
+        "6b52598a-da7b-4ca9-b35a-040db3195965": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Fabled_Logo_440x_0b624fa9-b1c6-47a6-84ab-67f0e93c7a36.svg",
+            "title": ""
+          }
+        },
+        "fa621cf4-ecb2-4822-b819-1c6f10c4ab9e": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PRESS_0000_telegraph_440x_1adc1e88-8458-4cf9-80f0-f00a52776b01.svg",
+            "title": ""
+          }
         }
       },
       "block_order": [
@@ -262,11 +296,16 @@
         "078c8b36-bebb-4d10-b55e-d0919b6edd7c",
         "28a0bcc7-634b-4b8d-b2c5-3c9b0e562acb",
         "d42cca56-071c-418f-a153-00aea1a3fd0c",
-        "e59ecef8-2667-40f0-8d65-e975c6cbfa96"
+        "e59ecef8-2667-40f0-8d65-e975c6cbfa96",
+        "e441fbe8-6898-4962-a58e-2071c274c096",
+        "895ee58a-82f6-4742-a8b9-6e1cbbdb6043",
+        "6b52598a-da7b-4ca9-b35a-040db3195965",
+        "fa621cf4-ecb2-4822-b819-1c6f10c4ab9e"
       ],
       "settings": {
         "title": "Featured In",
-        "title_style": "h3-alt"
+        "title_style": "h3-alt",
+        "color_scheme": "background-off-white"
       }
     }
   },
