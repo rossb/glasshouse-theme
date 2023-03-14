@@ -18,6 +18,8 @@
   display: block;
 }
 
+.rte ul,
+.rte ol,
 .rte p {
   margin: 0;
   margin-bottom: calc(var(--font-size-rte) * var(--line-height-rte));
@@ -32,6 +34,8 @@
 }
 
 @media screen and (min-width: 750px) {
+  .rte ul,
+  .rte ol,
   .rte p {
     margin: 0;
     margin-bottom: calc(var(--font-size-desktop-rte) * var(--line-height-desktop-rte));
@@ -54,7 +58,7 @@
 
 .rte h1,
 .rte h2 {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 @media screen and (min-width: 750px) {

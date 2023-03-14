@@ -3788,6 +3788,7 @@ input {
   text-transform: uppercase;
   color: rgb(115, 117, 119);
   display: flex;
+  letter-spacing: var(--letter-spacing-4);
 }
 .breadcrumbs > *,
 .breadcrumbs a {

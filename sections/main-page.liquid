@@ -18,11 +18,12 @@
   }
 {%- endstyle -%}
 
-<h1 class="main-page-title page-title h0">
-  {{ page.title | escape }}
-</h1>
+<div class="page-title__wrapper main-page-title">
+  <h1 class="h1">{{ page.title | escape }}</h1>
+  <p class="breadcrumbs"><a href="{{ shop.url }}">GLASSHOUSE</a> / {{ page.title }}</p>
+</div>
 
-<div class="page-width page-width--narrow">
+<div class="main-page-body page-width page-width--narrow">
   <div class="rte">
     {{ page.content }}
   </div>
