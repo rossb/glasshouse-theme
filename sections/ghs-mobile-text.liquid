@@ -13,7 +13,7 @@
   </div>
 {% endif %}
 
-{% javascript %}
+<script>
   (() => {
     const moreBtn = document.querySelector('.section-{{ section.id }} .readmore__btn');
     const moreTxt = document.querySelector('.section-{{ section.id }} .readmore__more');
@@ -26,7 +26,7 @@
       });
     });
   })();
-{% endjavascript %}
+</script>
 
 <style>
   .readmore {

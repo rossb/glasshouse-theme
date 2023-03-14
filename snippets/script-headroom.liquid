@@ -1,0 +1,9 @@
+<script src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.js"></script>
+<script>
+  (() => {
+    const header = document.querySelector('html');
+    const options = { offset: 10 };
+    const headroom = new Headroom(header, options);
+    headroom.init();
+  })();
+</script>
