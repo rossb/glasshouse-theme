@@ -3733,7 +3733,7 @@ input {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
-.scrollbar--always {
+.scrollbar--y-always {
   overflow: auto;
   overflow-y: scroll;
 }

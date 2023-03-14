@@ -21,6 +21,16 @@
   display: block;
 }
 
+.article-card__image-pos--v-top .card__media .media img {
+  object-position: center top;
+}
+.article-card__image-pos--v-bottom .card__media .media img {
+  object-position: center bottom;
+}
+.article-card__image-pos--center .card__media .media img {
+  object-position: center center;
+}
+
 .article-card__title {
   text-decoration: none;
   word-break: break-word;

@@ -11,7 +11,7 @@
   - show_author: {String} The setting either show the article author or not. If it's not included it will not show the author by default
   - show_badge: {String} The setting either show the blog badge or not.
   - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
-
+  - class_str
   Usage:
   {% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
 {% endcomment %}
@@ -30,6 +30,7 @@
     {% comment %} <article aria-labelledby="Article-{{ article.id }}"> {% endcomment %}
     <div
       class="
+        {{ class_str }}
         card article-card
         card--{{ settings.blog_card_style }}
         {% if media_height and media_height != 'adapt' %} article-card__image--{{ media_height }}{% endif %}

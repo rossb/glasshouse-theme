@@ -45,6 +45,8 @@
           >
             {% liquid
               assign setting_name = 'article_' | append: forloop.index
+              assign image_pos = 'article_image_pos_' | append: forloop.index
+              assign class_str = 'article-card__image-pos--' | append: section.settings[image_pos]
               assign this_article = section.settings[setting_name]
               if this_article == blank
                 assign this_article = article
@@ -57,7 +59,9 @@
               show_image: true,
               show_date: section.settings.show_date,
               show_author: section.settings.show_author,
-              show_excerpt: true
+              show_excerpt: true,
+              image_position: section.settings[image_pos],
+              class_str: class_str
             %}
           </div>
           {% if forloop.first %}<div class="other-posts">{% endif %}
@@ -124,6 +128,71 @@
       "id": "view_all_label",
       "label": "View all label",
       "default": "View all articles"
+    },
+    {
+      "type": "header",
+      "content": "Image sizing",
+      "info": "Manually adjust image sizing for each featured post"
+    },
+    {
+      "type": "select",
+      "id": "article_image_pos_1",
+      "options": [
+        {
+          "value": "center",
+          "label": "Default (centres image)"
+        },
+        {
+          "value": "v-top",
+          "label": "Vertical top"
+        },
+        {
+          "value": "v-bottom",
+          "label": "Vertical bottom"
+        }
+      ],
+      "default": "center",
+      "label": "Article 1"
+    },
+    {
+      "type": "select",
+      "id": "article_image_pos_2",
+      "options": [
+        {
+          "value": "center",
+          "label": "Default (centres image)"
+        },
+        {
+          "value": "v-top",
+          "label": "Vertical top"
+        },
+        {
+          "value": "v-bottom",
+          "label": "Vertical bottom"
+        }
+      ],
+      "default": "center",
+      "label": "Article 2"
+    },
+    {
+      "type": "select",
+      "id": "article_image_pos_3",
+      "options": [
+        {
+          "value": "center",
+          "label": "Default (centres image)"
+        },
+        {
+          "value": "v-top",
+          "label": "Vertical top"
+        },
+        {
+          "value": "v-bottom",
+          "label": "Vertical bottom"
+        }
+      ],
+      "default": "center",
+      "label": "Article 3"
     },
     {
       "type": "header",
